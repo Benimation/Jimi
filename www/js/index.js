@@ -37,3 +37,27 @@ var app = {
 		
     }
 };
+
+
+
+$(document).ready(function(e) {
+	setTimeout(function() {
+		$("#splash").css("opacity", "0");
+		
+		setTimeout(loadScreen1, 1000);
+		
+	}, 2000);
+	
+	
+	
+	function loadScreen1() {
+		$("#container").load("pages/screen1.html", function() {
+			$("#splash").css("display", "none");
+			
+		});
+		
+		$("#container").css("opacity", "1");
+		
+	}
+    
+});

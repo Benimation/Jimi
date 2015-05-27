@@ -1,0 +1,16 @@
+<img class="testimg" src="img/screen3.png" />
+
+<script>
+$(".testimg").click(function(e) {
+	$("#container").css("opacity", "0");
+	
+	setTimeout(function() {
+		$("#container").load("pages/screen4.html", function() {
+			$("#container").css("opacity", "1");
+			
+		});
+	}, 1000);
+	
+});
+
+</script>
