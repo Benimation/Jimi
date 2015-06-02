@@ -62,3 +62,13 @@ html, body, #splash {
 	width: 100%;
 	
 }
+
+#back {
+	width: 20%;
+	background-color: #000;
+	position: absolute;
+	top: 0;
+	background-image: url("../img/arrowleft.svg");
+	background-size: cover;
+	
+}
