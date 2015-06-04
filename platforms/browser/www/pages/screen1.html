@@ -1,6 +1,5 @@
 <img class="testimg" src="img/screen1.png" />
 
-<div id="back"></div>
 
 <script>
 $(".testimg").click(function(e) {
@@ -15,23 +14,6 @@ $(".testimg").click(function(e) {
 	
 });
 
-$("#back").height($("#back").width());
 
-$(window).resize(function(e) {
-	$("#back").height($("#back").width());
-    
-});
-
-$("#back").click(function(e) {
-  $("#container").css("opacity", "0");
-	
-    setTimeout(function() {
-		$("#container").load("pages/screen4.html", function() {
-			$("#container").css("opacity", "1");
-			
-		});
-	}, 1000);
-  
-});
 
 </script>
