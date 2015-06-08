@@ -18,6 +18,10 @@ html, body, #splash {
 	
 }
 
+body{
+	font-family: "lato", 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;	
+}
+
 #splash {
 	background-color: #fff;
 	text-align: center;
@@ -63,13 +67,22 @@ html, body, #splash {
 }
 
 #back {
-	width: 60px;
+	width: 29px;
 	position: absolute;
-	top: 0;
+	top: 27px;
 	background-image: url("../img/back.png");
 	background-size: contain;
 	background-repeat: no-repeat;
-	height: 60px;
-	margin: 10px;
+	height: 58px;
+	margin: 11px;
 	
+}
+
+#categories > li{
+	line-height: 58px;
+  	font-weight: 300;
+  	font-size: 24px;
+ 	border-bottom: 1px solid #bc003b;
+  	color: #404e5c;
+  	padding-left: 80px;
 }
