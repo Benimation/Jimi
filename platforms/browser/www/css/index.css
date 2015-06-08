@@ -64,11 +64,11 @@ html, body, #splash {
 
 #back {
 	width: 20%;
-	height: 10%;
 	/*background-color: #000;*/
 	position: absolute;
 	top: 0;
-	/*background-image: url("../img/arrowleft.svg");*/
+	background-image: url("../img/back.png");
 	background-size: cover;
+	height: 10%;
 	
 }
