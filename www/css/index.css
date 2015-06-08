@@ -85,4 +85,9 @@ body{
  	border-bottom: 1px solid #bc003b;
   	color: #404e5c;
   	padding-left: 80px;
+	background-image: url(../img/nextred.png);
+	background-repeat: no-repeat;
+	background-position-x: 97%;
+  	background-position-y: 50%;
+  	background-size: 4%;
 }
