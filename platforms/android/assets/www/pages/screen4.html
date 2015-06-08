@@ -1,5 +1,7 @@
 <img class="testimg" src="img/screen4.png" />
 
+<div id="back"></div>
+
 <script>
 $(".testimg").click(function(e) {
 	$("#container").css("opacity", "0");
@@ -11,6 +13,25 @@ $(".testimg").click(function(e) {
 		});
 	}, 1000);
 	
+});
+
+$("#back").height($("#back").width());
+
+$(window).resize(function(e) {
+	$("#back").height($("#back").width());
+    
+});
+
+$("#back").click(function(e) {
+  $("#container").css("opacity", "0");
+	
+    setTimeout(function() {
+		$("#container").load("pages/screen3.html", function() {
+			$("#container").css("opacity", "1");
+			
+		});
+	}, 1000);
+  
 });
 
 </script>
