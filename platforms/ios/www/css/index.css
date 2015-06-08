@@ -29,7 +29,6 @@ html, body, #splash {
 #logo {
 	display: inline-block;
 	width: 100%;
-	max-width: 256px;
 	
 }
 
@@ -65,6 +64,11 @@ html, body, #splash {
 
 #back {
 	width: 20%;
-	background-color: black;
+	height: 10%;
+	/*background-color: #000;*/
+	position: absolute;
+	top: 0;
+	/*background-image: url("../img/arrowleft.svg");*/
+	background-size: cover;
 	
 }

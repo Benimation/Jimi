@@ -40,6 +40,7 @@ var app = {
 
 
 
+// First screen
 $(document).ready(function(e) {
 	setTimeout(function() {
 		$("#splash").css("opacity", "0");
@@ -60,4 +61,12 @@ $(document).ready(function(e) {
 		
 	}
     
+});
+
+
+
+// connectie grote boze buitenwereld
+$.getJSON("http://benimation.nl/jimi/db/gettest.php", function(data) {
+	alert(data);
+	
 });
