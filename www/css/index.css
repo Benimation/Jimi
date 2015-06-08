@@ -63,11 +63,13 @@ html, body, #splash {
 }
 
 #back {
-	width: 20%;
-	/*background-color: #000;*/
+	width: 60px;
 	position: absolute;
 	top: 0;
 	background-image: url("../img/back.png");
-	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 60px;
+	margin: 10px;
 	
 }
