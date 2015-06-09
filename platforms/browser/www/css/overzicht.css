@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* created by Benimation */
+
+ul#results > li > img {
+	height: 100px;
+	display: inline-block;
+	
+}
+
+ul#results > li > div.productinfo {
+	display: inline-block;
+	
+}
+
+ul#results > li > div.productinfo > h2, ul#results > li > div.productinfo > .hoofdeffect > h3, ul#results > li > div.productinfo > .bijeffect > h4, ul#results > li > div.productinfo {
+	font-weight: 300;
+	
+}
+
+ul#results > li {
+	border-bottom: solid 1px #bc003b;
+	
+}
