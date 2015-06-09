@@ -80,13 +80,14 @@ body{
 
 #categories > li{
 	line-height: 58px;
-  	font-weight: 300;
-  	font-size: 24px;
- 	border-bottom: 1px solid #bc003b;
-  	color: #404e5c;
-  	padding-left: 80px;
-	background-image: url(../img/nextred.png);
+	font-weight: 300;
+	font-size: 24px;
+	border-bottom: 1px solid #BC003B;
+	color: #404E5C;
+	padding-left: 80px;
 	background-repeat: no-repeat;
-	background-position: 96% center;
-  	background-size: 14px;
+	background-position: 96% center, 4%;
+	background-size: 14px auto, 32px auto;
+	background-image: url("../img/nextred.png"), url("../img/iconen/droomopwekkend.png");
+	
 }
