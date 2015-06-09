@@ -1,2 +1,13 @@
 @charset "UTF-8";
 /* created by Benimation */
+
+ul#results > li > img {
+	height: 100px;
+	display: inline-block;
+	
+}
+
+ul#results > li > div.productinfo {
+	display: inline-block;
+	
+}

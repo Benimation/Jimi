@@ -16,7 +16,7 @@
 
 #logoLogin{
 	width: 50%;
-  	height: 30%;
+  	height: 40%;
 	margin-left: auto;
 	margin-right: auto;
 	background-image:url("../img/logologin.png");
@@ -28,7 +28,7 @@
 #logincontainer > form > input{
 	width: 100%;
 	display: inline-block;
-	font-size: 24px;
+	font-size: 18px;
 	background: transparent;
   	border: hidden;	
 	font-family: "lato", 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;	
@@ -69,7 +69,7 @@ hr{
 	margin-left: auto;
 	margin-right: auto;
 	padding: 15px 0px;
-	font-size: 24px;
+	font-size: 18px;
   	font-weight: 300;
   	margin-top: 10px;
   	border-bottom: 4px solid #9b0013
