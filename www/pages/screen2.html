@@ -3,18 +3,76 @@
 <div id="back"></div>
 
 <ul id="categories">
-	<li>Droomopwekkend</li>
-    <li>Geestverruimend</li>
-    <li>Hallucinerend</li>
-    <li>Verbeterde concentratie</li>
-    <li>Energie</li>
-    <li>Lustopwekkend</li>
-    <li>Pijnverlichtend</li>
-    <li>Ontspanning</li>
+	<li class="droom">Droomopwekkend</li>
+    <li class="geest">Geestverruimend</li>
+    <li class="hallu">Hallucinerend</li>
+    <li class="concen">Verbeterde concentratie</li>
+    <li class="ener">Energie</li>
+    <li class="lust">Lustopwekkend</li>
+    <li class="pijn">Pijnverlichtend</li>
+    <li class="ontspan">Ontspanning</li>
 </ul>
 
 <script>
-$("#categories").click(function(e) {
+var gekozencategorie = "";
+
+$("#categories > li.droom").click(function(e) {
+	gekozencategorie = "Droomopwekkend";
+	
+	loadProductPage();
+	
+});
+
+$("#categories > li.geest").click(function(e) {
+	gekozencategorie = "Geestverruimend";
+	
+	loadProductPage();
+	
+});
+
+$("#categories > li.hallu").click(function(e) {
+	gekozencategorie = "Hallucinerend";
+	
+	loadProductPage();
+	
+});
+
+$("#categories > li.concen").click(function(e) {
+	gekozencategorie = "Verbeterde concentratie";
+	
+	loadProductPage();
+	
+});
+
+$("#categories > li.ener").click(function(e) {
+	gekozencategorie = "Energie";
+	
+	loadProductPage();
+	
+});
+
+$("#categories > li.lust").click(function(e) {
+	gekozencategorie = "Lustopwekkend";
+	
+	loadProductPage();
+	
+});
+
+$("#categories > li.pijn").click(function(e) {
+	gekozencategorie = "Pijnverlichtend";
+	
+	loadProductPage();
+	
+});
+
+$("#categories > li.ontspan").click(function(e) {
+	gekozencategorie = "Ontspanning";
+	
+	loadProductPage();
+	
+});
+
+function loadProductPage() {
 	$("#container").css("opacity", "0");
 	
 	setTimeout(function() {
@@ -24,7 +82,7 @@ $("#categories").click(function(e) {
 		});
 	}, 1000);
 	
-});
+}
 
 $("#back").height($("#back").width());
 
