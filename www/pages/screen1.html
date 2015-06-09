@@ -3,16 +3,21 @@
     <div id="logoLogin"></div>
     
     <form id="loginform">
-    <input type="text" name="naam" placeholder="inlognaam">
-    <input type="text" name="wachtwoord" placeholder="wachtwoord">
+    <input type="text" name="naam" placeholder="Inlognaam">
+    <hr />
+    <input type="text" name="wachtwoord" placeholder="Wachtwoord">
     </form>
+    
+    <div id="button"> Inloggen </div>
 	
-
+	<p id="registreer">Nog geen account? <span id="bold">Registreer hier!</span></p>
+    
+    <div id="button" class="verder"> Verder zonder in te loggen </div>
 </div>
 
 
 <script>
-$("#logincontainer").click(function(e) {
+$("#button").click(function(e) {
 	$("#container").css("opacity", "0");
 	
     setTimeout(function() {

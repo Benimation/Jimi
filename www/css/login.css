@@ -9,17 +9,16 @@
 }
 
 #loginform{
-	width: 70%;
+	width: 80%;
 	margin-left: auto;
 	margin-right: auto;	
 }
 
 #logoLogin{
-	width: 60%;
+	width: 50%;
   	height: 30%;
 	margin-left: auto;
 	margin-right: auto;
-	top: 10%;
 	background-image:url("../img/logologin.png");
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -27,9 +26,65 @@
 
 #logincontainer > form > input{
 	width: 100%;
+	display: inline-block;
+	font-size: 24px;
+	background: transparent;
+  	border: hidden;	
+	font-family: "lato", 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;	
+	font-weight: 300;
+	color: #526173;
+	line-height: 48px;
+}
+
+
+#logincontainer > form > input:focus {outline:none;}
+
+hr{
+	width: 100%;
+	border-color: #526173	
+}
+
+::-webkit-input-placeholder {
+   color: #526173;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #526173;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #526173;  
+}
+
+:-ms-input-placeholder {  
+   color: #526173;  
+}
+
+#button{
+	width: 80%;
+	text-align: center;
+	color: #fff;
+	background-color: #bc003b;
 	margin-left: auto;
 	margin-right: auto;
-	display: inline-block;
-	padding: 10px;
-	font-size: 24px;	
+	padding: 15px 0px;
+	font-size: 18px;
+  	font-weight: 300;
+  	margin-top: 10px;
+  	border-bottom: 4px solid #9b0013
+}
+
+#registreer{
+	text-align: center;
+  	color: #fff;
+	font-weight: 300;
+	margin-top: 20px;
+}
+
+#bold{
+	font-weight: 700;	
+}
+
+.verder{
+	margin-top: 40px;	
 }
