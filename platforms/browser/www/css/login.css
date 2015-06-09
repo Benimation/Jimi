@@ -9,9 +9,10 @@
 }
 
 #loginform{
-	width: 80%;
+	width: 90%;
 	margin-left: auto;
 	margin-right: auto;	
+	margin-bottom: 20px;
 }
 
 #logoLogin{
@@ -28,7 +29,7 @@
 #logincontainer > form > input{
 	width: 100%;
 	display: inline-block;
-	font-size: 18px;
+	font-size: 24px;
 	background: transparent;
   	border: hidden;	
 	font-family: "lato", 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;	
@@ -62,7 +63,7 @@ hr{
 }
 
 #button{
-	width: 80%;
+	width: 90%;
 	text-align: center;
 	color: #fff;
 	background-color: #bc003b;
