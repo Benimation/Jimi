@@ -9,11 +9,13 @@ ul#results > li > img {
 
 ul#results > li > div.productinfo {
 	display: inline-block;
+	width: 65%;
 	
 }
 
 ul#results > li > div.productinfo > h2, ul#results > li > div.productinfo > .hoofdeffect > h3, ul#results > li > div.productinfo > .bijeffect > h4, ul#results > li > div.productinfo {
 	font-weight: 300;
+	display: inline-block;
 	
 }
 
@@ -23,5 +25,27 @@ ul#results > li {
 	background-position: 96% center;
 	background-size: 14px auto;
 	background-image: url("../img/nextred.png");
+	
+}
+
+ul#results > li > div.productinfo > .hoofdeffect {
+	background-color: #bc003b;
+	color: #fff;
+	padding: 8px;
+	margin-bottom: 7px;
+	
+}
+
+ul#results > li > div.productinfo > .bijeffect {
+	background-color: #404e5c;
+	color: #fff;
+	padding: auto 8px;
+	
+}
+
+ul#results .upvote, .downvote {
+	display: inline-block;
+	float: right;
+	margin: 2px;
 	
 }
