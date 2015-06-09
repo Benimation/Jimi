@@ -65,8 +65,8 @@ $(document).ready(function(e) {
 
 
 
-// connectie grote boze buitenwereld
+/* connectie grote boze buitenwereld
 $.getJSON("http://benimation.nl/jimi/db/gettest.php", function(data) {
 	alert(data);
 	
-});
+}); */
