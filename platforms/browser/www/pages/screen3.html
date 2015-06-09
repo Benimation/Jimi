@@ -4,7 +4,7 @@
 </div>
 
 <ul id="results">
-	<li>
+	<li id="product1">
     	<img src="img/product/1.jpg" alt="Salvia Divinorum" />
         <div class="productinfo">
             <h2>Salvia Divinorum</h2>
@@ -24,7 +24,7 @@
         
     </li>
     
-    <li>
+    <li id="product2">
     <img src="img/product/2.jpg" alt="Salvia Divinorum" />
     <div class="productinfo">
     	<h2>Afrikaans droomkruid</h2>
@@ -44,7 +44,7 @@
         
     </li>
     
-    <li>
+    <li id="product3">
     <img src="img/product/3.jpg" alt="Salvia Divinorum" />
     <div class="productinfo">
     	<h2>Ayahuasca</h2>
@@ -69,7 +69,30 @@
 <script>
 $(".hoofdeffect > h3").html(gekozencategorie);
 
-$(".testimg").click(function(e) {
+var gekozenproduct = 0;
+
+$("#results > li#product1").click(function(e) {
+	gekozenproduct = 1;
+	
+	loadProductPage();
+	
+});
+
+$("#results > li#product2").click(function(e) {
+	gekozenproduct = 2;
+	
+	loadProductPage();
+	
+});
+
+$("#results > li#product3").click(function(e) {
+	gekozenproduct = 3;
+	
+	loadProductPage();
+	
+});
+
+function loadProductPage() {
 	$("#container").css("opacity", "0");
 	
 	setTimeout(function() {
@@ -79,7 +102,7 @@ $(".testimg").click(function(e) {
 		});
 	}, 1000);
 	
-});
+}
 
 $("#back").height($("#back").width());
 
