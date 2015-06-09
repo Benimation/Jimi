@@ -19,5 +19,9 @@ ul#results > li > div.productinfo > h2, ul#results > li > div.productinfo > .hoo
 
 ul#results > li {
 	border-bottom: solid 1px #bc003b;
+	background-repeat: no-repeat;
+	background-position: 96% center;
+	background-size: 14px auto;
+	background-image: url("../img/nextred.png");
 	
 }
