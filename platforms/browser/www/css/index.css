@@ -87,7 +87,6 @@ body{
   	padding-left: 80px;
 	background-image: url(../img/nextred.png);
 	background-repeat: no-repeat;
-	background-position-x: 97%;
-  	background-position-y: 50%;
-  	background-size: 4%;
+	background-position: 96% center;
+  	background-size: 14px;
 }
