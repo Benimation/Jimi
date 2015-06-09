@@ -87,9 +87,15 @@ $("#foto").css("background-image", 'url("img/product/' + gekozenproduct + 'groot
 
 // tabs
 $("#tabs > #effecten").css("display", "block");
+$("#tabmenu > li#effecten").addClass("activetab");
 
 // effecten
 $("#tabmenu > li#effecten").click(function(e) {
+	$(this).addClass("activetab");
+	$("#tabmenu > li#beschrijving").removeClass("activetab");
+	$("#tabmenu > li#gebruik").removeClass("activetab");
+	$("#tabmenu > li#waarschuwing").removeClass("activetab");
+	
 	$("#tabs > div#effecten").css("display", "block");
 	$("#tabs > div#beschrijving").css("display", "none");
 	$("#tabs > div#gebruik").css("display", "none");
@@ -99,6 +105,11 @@ $("#tabmenu > li#effecten").click(function(e) {
 
 // beschrijving
 $("#tabmenu > li#beschrijving").click(function(e) {
+	$(this).addClass("activetab");
+	$("#tabmenu > li#effecten").removeClass("activetab");
+	$("#tabmenu > li#gebruik").removeClass("activetab");
+	$("#tabmenu > li#waarschuwing").removeClass("activetab");
+	
 	$("#tabs > div#effecten").css("display", "none");
 	$("#tabs > div#beschrijving").css("display", "block");
 	$("#tabs > div#gebruik").css("display", "none");
@@ -108,6 +119,11 @@ $("#tabmenu > li#beschrijving").click(function(e) {
 
 // gebruik
 $("#tabmenu > li#gebruik").click(function(e) {
+	$(this).addClass("activetab");
+	$("#tabmenu > li#beschrijving").removeClass("activetab");
+	$("#tabmenu > li#effecten").removeClass("activetab");
+	$("#tabmenu > li#waarschuwing").removeClass("activetab");
+	
 	$("#tabs > div#effecten").css("display", "none");
 	$("#tabs > div#beschrijving").css("display", "none");
 	$("#tabs > div#gebruik").css("display", "block");
@@ -118,6 +134,11 @@ $("#tabs > #gebruik > p").html(thisgebruik);
 
 // waarschuwing
 $("#tabmenu > li#waarschuwing").click(function(e) {
+	$(this).addClass("activetab");
+	$("#tabmenu > li#beschrijving").removeClass("activetab");
+	$("#tabmenu > li#gebruik").removeClass("activetab");
+	$("#tabmenu > li#effecten").removeClass("activetab");
+	
 	$("#tabs > div#effecten").css("display", "none");
 	$("#tabs > div#beschrijving").css("display", "none");
 	$("#tabs > div#gebruik").css("display", "none");

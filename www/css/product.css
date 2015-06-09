@@ -35,11 +35,19 @@
 	width: 24.25%;
 	text-align: center;
 	outline: 1px grey solid;
+	height: 64px;
+	line-height: 64px;
 	
 }
 
 .tab {
 	display: none;
+	
+}
+
+.activetab {
+	background-color: #bc003b;
+	color: #fff;
 	
 }
 
