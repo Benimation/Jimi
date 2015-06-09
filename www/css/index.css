@@ -93,6 +93,11 @@ body{
 	
 }
 
+#categories > li:hover {
+	cursor: pointer;
+	
+}
+
 #categories > li.droom {
 	background-image: url("../img/nextred.png"), url("../img/iconen/droomopwekkend.png");
 	
