@@ -42,12 +42,12 @@ var app = {
 
 // First screen
 $(document).ready(function(e) {
-	setTimeout(function() {
+	/*setTimeout(function() {
 		$("#splash").css("opacity", "0");
 		
 		setTimeout(loadScreen1, 1000);
 		
-	}, 2000);
+	}, 2000);*/
 	
 	
 	
