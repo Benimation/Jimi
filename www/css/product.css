@@ -30,5 +30,72 @@
 
 #tabmenu > li{
 	display: inline-block;
-	padding: 5px 10px;	
+	/*padding: 5px 10px;*/
+	font-size: 12px;
+	width: 24.25%;
+	text-align: center;
+	outline: 1px grey solid;
+	
+}
+
+.tab {
+	display: none;
+	
+}
+
+
+
+/* Effecten tab */
+#tabs #effecten > ul > li {
+	line-height: 58px;
+	font-weight: 300;
+	font-size: 18px;
+	border-bottom: 1px solid #BC003B;
+	color: #404E5C;
+	padding-left: 80px;
+	background-repeat: no-repeat;
+	background-position: 4%;
+	background-size: 32px auto;
+	background-image: url("../img/iconen/empty.png");
+	
+}
+
+#tabs #effecten > ul > li.droom {
+	background-image: url("../img/iconen/droomopwekkend.png");
+	
+}
+
+#tabs #effecten > ul > li.geest {
+	background-image: url("../img/iconen/geestverruimend.png");
+	
+}
+
+#tabs #effecten > ul > li.hallu {
+	background-image: url("../img/iconen/hallucinerend.png");
+	
+}
+
+#tabs #effecten > ul > li.concen {
+	background-image: url("../img/iconen/concentratie.png");
+	
+}
+
+#tabs #effecten > ul > li.ener {
+	background-image: url("../img/iconen/energie.png");
+	
+}
+
+#tabs #effecten > ul > li.lust {
+	background-image: url("../img/iconen/lustopwekkend.png");
+	
+}
+
+#tabs #effecten > ul > li.pijn {
+	background-image: url("../img/iconen/pijnverlichtend.png");
+	
+}
+
+#tabs #effecten > ul > li.ontspan {
+	background-image: url("../img/iconen/ontspanning.png");
+	
 }

@@ -11,17 +11,40 @@
 <div id="foto"></div>
 
 <ul id="tabmenu">
-	<li>Effecten</li>
-    <li>Beschrijving</li>
-    <li>Gebruik</li>
-    <li>Waarschuwing</li>
+	<li id="effecten">Effecten</li>
+    <li id="beschrijving">Beschrijving</li>
+    <li id="gebruik">Gebruik</li>
+    <li id="waarschuwing">Waarschuwing</li>
 </ul>
 
 <div id="tabs">
-	<div id="effecten"></div>
-    <div id="beschrijving"></div>
-    <div id="gebruik"></div>
-    <div id="waarschuwing"></div>
+	<div id="effecten" class="tab">
+    	<ul>
+            <li class="droom">Droomopwekkend</li>
+            <li class="geest">Geestverruimend</li>
+            <li class="hallu">Hallucinerend</li>
+            <li class="concen">Verbeterde concentratie</li>
+            <li class="ener">Energie</li>
+            <li class="lust">Lustopwekkend</li>
+            <li class="pijn">Pijnverlichtend</li>
+            <li class="ontspan">Ontspanning</li>
+        </ul>
+    </div>
+    
+    <div id="beschrijving" class="tab">
+    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ipsum tempus, scelerisque justo elementum, tincidunt justo. Ut imperdiet sollicitudin lacus, id efficitur dolor scelerisque eget. Phasellus lorem massa, luctus id justo eget, vestibulum cursus ante. Vestibulum quis turpis nulla. Duis id tempor lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam venenatis, diam id tincidunt scelerisque, mauris lorem ultricies ipsum, id ultricies felis tellus id ipsum. Proin quam augue, accumsan ultricies condimentum quis, mattis pellentesque arcu. Integer et nunc velit. Nullam nunc dolor, pulvinar sed est nec, fermentum hendrerit orci. Praesent quis justo tristique, scelerisque nibh in, ultricies felis.</p>
+        
+    </div>
+    
+    <div id="gebruik" class="tab">
+    	<p></p>
+        
+    </div>
+    
+    <div id="waarschuwing" class="tab">
+    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ipsum tempus, scelerisque justo elementum, tincidunt justo. Ut imperdiet sollicitudin lacus, id efficitur dolor scelerisque eget. Phasellus lorem massa, luctus id justo eget, vestibulum cursus ante. Vestibulum quis turpis nulla. Duis id tempor lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam venenatis, diam id tincidunt scelerisque, mauris lorem ultricies ipsum, id ultricies felis tellus id ipsum. Proin quam augue, accumsan ultricies condimentum quis, mattis pellentesque arcu. Integer et nunc velit. Nullam nunc dolor, pulvinar sed est nec, fermentum hendrerit orci. Praesent quis justo tristique, scelerisque nibh in, ultricies felis.</p>
+        
+    </div>
 	
 </div>
 
@@ -29,6 +52,81 @@
 
 
 <script>
+// gekozen product weergeven
+var thisproductnaam = "";
+var thisgebruik = "";
+
+switch (gekozenproduct) {
+	case 0:
+		thisproductnaam = "error";
+		thisgebruik = "error";
+		break;
+	case 1:
+		thisproductnaam = "Salvia Divinorum";
+		thisgebruik = "roken";
+		break;
+	case 2:
+		thisproductnaam = "Afrikaans droomkruid";
+		thisgebruik = "eten, drinken";
+		break;
+	case 3:
+		thisproductnaam = "Ayahuasca";
+		thisgebruik = "drinken, roken";
+		break;
+	default:
+		thisproductnaam = "default";
+		thisgebruik = "default";
+		break;
+	
+}
+
+$("#productnavigatie > h2").html(thisproductnaam);
+
+$("#foto").css("background-image", 'url("img/product/' + gekozenproduct + 'groot.jpg")');
+
+
+// tabs
+$("#tabs > #effecten").css("display", "block");
+
+// effecten
+$("#tabmenu > li#effecten").click(function(e) {
+	$("#tabs > div#effecten").css("display", "block");
+	$("#tabs > div#beschrijving").css("display", "none");
+	$("#tabs > div#gebruik").css("display", "none");
+	$("#tabs > div#waarschuwing").css("display", "none");
+    
+});
+
+// beschrijving
+$("#tabmenu > li#beschrijving").click(function(e) {
+	$("#tabs > div#effecten").css("display", "none");
+	$("#tabs > div#beschrijving").css("display", "block");
+	$("#tabs > div#gebruik").css("display", "none");
+	$("#tabs > div#waarschuwing").css("display", "none");
+    
+});
+
+// gebruik
+$("#tabmenu > li#gebruik").click(function(e) {
+	$("#tabs > div#effecten").css("display", "none");
+	$("#tabs > div#beschrijving").css("display", "none");
+	$("#tabs > div#gebruik").css("display", "block");
+	$("#tabs > div#waarschuwing").css("display", "none");
+    
+});
+$("#tabs > #gebruik > p").html(thisgebruik);
+
+// waarschuwing
+$("#tabmenu > li#waarschuwing").click(function(e) {
+	$("#tabs > div#effecten").css("display", "none");
+	$("#tabs > div#beschrijving").css("display", "none");
+	$("#tabs > div#gebruik").css("display", "none");
+	$("#tabs > div#waarschuwing").css("display", "block");
+    
+});
+
+
+
 $(".testimg").click(function(e) {
 	$("#container").css("opacity", "0");
 	
