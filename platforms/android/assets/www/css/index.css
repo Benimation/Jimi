@@ -149,3 +149,13 @@ body{
 	background-position: center;
 	background-size: 
 }
+
+.titlebanner {
+	background-color: #404E5C;
+	color: #FFF;
+	text-align: center;
+	height: 32px;
+	font-size: 16px;
+	line-height: 32px;
+	
+}

@@ -25,7 +25,7 @@
 #tabs{
 	width:100%;
 	height: auto;
-	border: 1px solid;	
+	outline: 1px solid;	
 }
 
 #tabmenu > li{
@@ -57,10 +57,10 @@
 #tabs #effecten > ul > li {
 	line-height: 58px;
 	font-weight: 300;
-	font-size: 18px;
+	font-size: 16px;
 	border-bottom: 1px solid #BC003B;
 	color: #404E5C;
-	padding-left: 80px;
+	padding-left: 60px;
 	background-repeat: no-repeat;
 	background-position: 4%;
 	background-size: 32px auto;
@@ -105,5 +105,36 @@
 
 #tabs #effecten > ul > li.ontspan {
 	background-image: url("../img/iconen/ontspanning.png");
+	
+}
+
+
+
+#tabs #effecten > ul > li > .upvote, #tabs #effecten > ul > li > .downvote {
+	padding: 0px 16px;
+	display: inline-block;
+	float: right;
+	background-size: 16px;
+	background-repeat: no-repeat;
+	background-position: center left;
+	padding-left: 16px;
+	
+}
+
+#tabs #effecten > ul > li > .upvote {
+	background-image: url("../img/iconen/up.png");
+	clear: both;
+	
+}
+
+#tabs #effecten > ul > li > .downvote {
+	background-image: url("../img/iconen/down.png");
+	
+}
+
+.koopbutton {
+	position: absolute;
+	top: 380px;
+	left: 15px;
 	
 }

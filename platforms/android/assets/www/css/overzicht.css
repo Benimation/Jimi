@@ -2,14 +2,14 @@
 /* created by Benimation */
 
 ul#results > li > img {
-	height: 100px;
+	width: 30%;
 	display: inline-block;
 	
 }
 
 ul#results > li > div.productinfo {
 	display: inline-block;
-	width: 65%;
+	width: 69%;
 	
 }
 
@@ -25,6 +25,11 @@ ul#results > li {
 	background-position: 96% center;
 	background-size: 14px auto;
 	background-image: url("../img/nextred.png");
+	
+}
+
+ul#results > li > div.productinfo > .bijeffect, ul#results > li > div.productinfo > .hoofdeffect {
+	width: 75%;
 	
 }
 
