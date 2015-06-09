@@ -39,7 +39,7 @@ ul#results > li > div.productinfo > .hoofdeffect {
 ul#results > li > div.productinfo > .bijeffect {
 	background-color: #404e5c;
 	color: #fff;
-	padding: auto 8px;
+	padding: 0 8px;
 	
 }
 
