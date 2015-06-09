@@ -1,0 +1,94 @@
+<img class="testimg" src="img/screen3.png" />
+
+<div id="back"></div>
+
+<ul id="results">
+	<li>
+    	<img src="img/product/1.jpg" alt="Salvia Divinorum" />
+        <div class="productinfo">
+            <h2>Salvia Divinorum</h2>
+            <div class="hoofdeffect">
+                <h3></h3>
+                <span class="upvote">10</span><span class="downvote">1</span>
+                
+            </div>
+            
+            <div class="bijeffect">
+                <h4>Afrodiserend</h4>
+                <span class="upvote">9</span><span class="downvote">3</span>
+                
+            </div>
+            
+        </div>
+        
+    </li>
+    
+    <li>
+    	<h2>Afrikaans droomkruid</h2>
+        <div class="hoofdeffect">
+        	<h3></h3>
+        	<span class="upvote">10</span><span class="downvote">2</span>
+            
+        </div>
+        
+        <div class="bijeffect">
+        	<h4>Euforisch</h4>
+            <span class="upvote">6</span><span class="downvote">2</span>
+        	
+        </div>
+        
+    </li>
+    
+    <li>
+    	<h2>Ayahuasca</h2>
+        <div class="hoofdeffect">
+        	<h3></h3>
+        	<span class="upvote">9</span><span class="downvote">3</span>
+            
+        </div>
+        
+        <div class="bijeffect">
+        	<h4>Geest leegmaken</h4>
+            <span class="upvote">5</span><span class="downvote">1</span>
+        	
+        </div>
+        
+    </li>
+
+</ul>
+
+<script>
+$(".hoofdeffect > h3").html(gekozencategorie);
+
+$(".testimg").click(function(e) {
+	$("#container").css("opacity", "0");
+	
+	setTimeout(function() {
+		$("#container").load("pages/screen4.html", function() {
+			$("#container").css("opacity", "1");
+			
+		});
+	}, 1000);
+	
+});
+
+$("#back").height($("#back").width());
+
+$(window).resize(function(e) {
+	$("#back").height($("#back").width());
+    
+});
+
+$("#back").click(function(e) {
+  $("#container").css("opacity", "0");
+	
+    setTimeout(function() {
+		$("#container").load("pages/screen2.html", function() {
+			$("#container").css("opacity", "1");
+			
+		});
+	}, 1000);
+  
+});
+
+</script>
