@@ -8,14 +8,16 @@
 	background-size: contain;
 }
 
-#loginform{
+#loginform {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;	
 	margin-bottom: 20px;
+	max-width: 600px;
+	
 }
 
-#logoLogin{
+#logoLogin {
 	width: 50%;
   	height: 40%;
 	margin-left: auto;
@@ -24,6 +26,8 @@
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
+	max-width: 200px;
+	
 }
 
 #logincontainer > form > input{
@@ -75,6 +79,11 @@ hr{
   	margin-top: 10px;
 	cursor: pointer;
   	border-bottom: 4px solid #9b0013
+}
+
+#loginform #button {
+	width: 100%;
+	
 }
 
 #registreer{

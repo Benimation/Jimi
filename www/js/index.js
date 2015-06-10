@@ -41,6 +41,8 @@ var app = {
 
 
 // First screen
+window.scrollTo(0, 0);
+
 $(document).ready(function(e) {
 	setTimeout(function() {
 		$("#splash").css("opacity", "0");
