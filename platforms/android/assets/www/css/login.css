@@ -73,6 +73,7 @@ hr{
 	font-size: 18px;
   	font-weight: 300;
   	margin-top: 10px;
+	cursor: pointer;
   	border-bottom: 4px solid #9b0013
 }
 

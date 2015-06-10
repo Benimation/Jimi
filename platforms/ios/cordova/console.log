@@ -43,3 +43,17 @@ To disable web storage backup to iCloud, set the BackupWebStorage preference to 
 2015-06-08 10:41:04.381 Hello World[7552:1542169] Finished load of: file:///Users/Benimation/Library/Developer/CoreSimulator/Devices/F5501647-B1A8-4203-B895-0946CE86D1F3/data/Containers/Bundle/Application/15C3910A-BB95-4D52-9847-7E272D90F479/Hello%20World.app/www/index.html
 2015-06-08 10:41:27.871 Hello World[7552:1542169] Resetting plugins due to page load.
 2015-06-08 10:41:27.983 Hello World[7552:1542169] Finished load of: file:///Users/Benimation/Library/Developer/CoreSimulator/Devices/F5501647-B1A8-4203-B895-0946CE86D1F3/data/Containers/Bundle/Application/15C3910A-BB95-4D52-9847-7E272D90F479/Hello%20World.app/www/index.html
+2015-06-10 13:02:02.137 Hello World[80233:2076718] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/Benimation/Library/Developer/CoreSimulator/Devices/F5501647-B1A8-4203-B895-0946CE86D1F3/data/Containers/Data/Application/6DEF2B8D-FA1C-47D1-A51E-D3A171F8C44A/Library/Cookies/Cookies.binarycookies
+2015-06-10 13:02:02.380 Hello World[80233:2076718] Apache Cordova native platform version 3.8.0 is starting.
+2015-06-10 13:02:02.380 Hello World[80233:2076718] Multi-tasking -> Device: YES, App: YES
+2015-06-10 13:02:02.392 Hello World[80233:2076718] Unlimited access to network resources
+2015-06-10 13:02:02.402 Hello World[80233:2076718] 
+
+Started backup to iCloud! Please be careful.
+Your application might be rejected by Apple if you store too much data.
+For more information please read "iOS Data Storage Guidelines" at:
+https://developer.apple.com/icloud/documentation/data-storage/
+To disable web storage backup to iCloud, set the BackupWebStorage preference to "local" in the Cordova config.xml file
+
+2015-06-10 13:02:02.910 Hello World[80233:2076718] Resetting plugins due to page load.
+2015-06-10 13:02:03.162 Hello World[80233:2076718] Finished load of: file:///Users/Benimation/Library/Developer/CoreSimulator/Devices/F5501647-B1A8-4203-B895-0946CE86D1F3/data/Containers/Bundle/Application/CCB638B2-69C8-4D72-A221-65EFF115E142/Hello%20World.app/www/index.html

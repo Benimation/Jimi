@@ -25,6 +25,7 @@ ul#results > li {
 	background-position: 96% center;
 	background-size: 14px auto;
 	background-image: url("../img/nextred.png");
+	cursor: pointer;
 	
 }
 
@@ -34,17 +35,18 @@ ul#results > li > div.productinfo > .bijeffect, ul#results > li > div.productinf
 }
 
 ul#results > li > div.productinfo > .hoofdeffect {
-	background-color: #bc003b;
+	/*background-color: #bc003b;
 	color: #fff;
-	padding: 8px;
+	padding: 8px;*/
 	margin-bottom: 7px;
 	
 }
 
 ul#results > li > div.productinfo > .bijeffect {
-	background-color: #404e5c;
+	/*background-color: #404e5c;
 	color: #fff;
-	padding: 0 8px;
+	padding: 0 8px;*/
+	margin-bottom: 15px;
 	
 }
 

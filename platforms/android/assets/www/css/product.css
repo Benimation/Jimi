@@ -37,11 +37,15 @@
 	outline: 1px grey solid;
 	height: 64px;
 	line-height: 64px;
+	cursor: pointer;
 	
 }
 
 .tab {
 	display: none;
+	font-size: 12px;
+  	line-height: 20px;
+  	padding: 10px;
 	
 }
 
