@@ -8,7 +8,7 @@
 
 #productnavigatie h2{
 	text-align:center;	
-	color: #bc003b;
+	color: #404e5c;
 	font-size: 24px;
 }
 
@@ -116,8 +116,9 @@
 	border-bottom: 1px solid #BC003B;
 	color: #404E5C;
 	padding-left: 60px;
+	padding-right: 16px;
 	background-repeat: no-repeat;
-	background-position: 4%;
+	background-position: 16px center;
 	background-size: 32px auto;
 	background-image: url("../img/iconen/empty.png");
 	list-style: none;
@@ -167,7 +168,7 @@
 
 
 #tabs #effecten > ul > li > .upvote, #tabs #effecten > ul > li > .downvote {
-	padding: 0px 16px;
+	padding: 0px 10px 0 18px
 	display: inline-block;
 	float: right;
 	background-size: 16px;
