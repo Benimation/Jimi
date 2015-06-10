@@ -45,7 +45,6 @@
 	display: none;
 	font-size: 12px;
   	line-height: 20px;
-  	padding: 10px;
 	
 }
 
@@ -54,6 +53,9 @@
 	color: #fff;
 	
 }
+
+
+
 
 
 
@@ -69,6 +71,7 @@
 	background-position: 4%;
 	background-size: 32px auto;
 	background-image: url("../img/iconen/empty.png");
+	list-style: none;
 	
 }
 
@@ -140,5 +143,16 @@
 	position: absolute;
 	top: 380px;
 	left: 15px;
+	
+}
+
+
+
+
+
+
+/* Beschrijving tab */
+#tabs #beschrijving {
+	padding: 10px;
 	
 }
