@@ -45,7 +45,7 @@ $(document).ready(function(e) {
 	setTimeout(function() {
 		$("#splash").css("opacity", "0");
 		
-		setTimeout(loadScreen1, 1000);
+		setTimeout(loadScreen1, 100);
 		
 	}, 2000);
 	

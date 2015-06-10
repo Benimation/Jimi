@@ -28,7 +28,7 @@ body{
 	background-color: #fff;
 	text-align: center;
 	opacity: 1;
-	transition: 1s opacity ease-in-out;
+	transition: 100ms opacity ease-in-out;
 	
 }
 
@@ -59,7 +59,7 @@ body{
 
 #container {
 	opacity: 0;
-	transition: 1s opacity ease-in-out;
+	transition: 100ms opacity ease-in-out;
 	height: 100%;
 	
 }
