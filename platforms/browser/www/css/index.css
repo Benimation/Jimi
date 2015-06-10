@@ -142,6 +142,8 @@ body{
 }
 
 .topmenu{
+	position: fixed;
+	width: 100%;
 	height: 80px;
   	background-color: #bc003b;	
 	background-image: url("../img/logotop.png");
@@ -149,6 +151,10 @@ body{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 
+}
+
+.contentcontainer{
+	margin-top:80px;	
 }
 
 .titlebanner {
