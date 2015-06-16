@@ -145,10 +145,10 @@ body{
 	width: 100%;
 	height: 112px;
 	top: 0;
-  	background-color: #bc003b;	
+  	background-image: url("../img/header.png");
+		background-size: cover;	
 		
 	z-index: 999;
-	border-bottom: 2px #8c959d solid;
 	
 }
 
@@ -157,9 +157,7 @@ body{
 }
 
 .titlebanner {
-	background-image: url("../img/header.png");
-		background-size: cover;
-
+	background:#434e5d;
 	color: #fff;
 	text-align: center;
 	height: 32px;
