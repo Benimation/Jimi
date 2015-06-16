@@ -2,7 +2,7 @@
 /* created by Benimation */
 
 ul#results > li > img {
-	width: 30%;
+	width: 25%;
 	display: inline-block;
 	
 }
@@ -16,7 +16,7 @@ ul#results > li > div.productinfo {
 ul#results > li > div.productinfo > h2, ul#results > li > div.productinfo > .hoofdeffect > h3, ul#results > li > div.productinfo > .bijeffect > h4, ul#results > li > div.productinfo {
 	font-weight: 300;
 	display: inline-block;
-	  margin-top: 8px;
+	  margin-top: 5px;
 	
 }
 
@@ -31,7 +31,7 @@ ul#results > li {
 }
 
 ul#results > li > div.productinfo > .bijeffect, ul#results > li > div.productinfo > .hoofdeffect {
-	width: 75%;
+	margin-right: 22px;
 	
 }
 
@@ -40,6 +40,7 @@ ul#results > li > div.productinfo > .hoofdeffect {
 	color: #fff;
 	padding: 8px;*/
 	margin-bottom: 7px;
+	color: #bc003b;
 	
 }
 
@@ -56,4 +57,39 @@ ul#results .upvote, .downvote {
 	float: right;
 	margin: 2px;
 	
+}
+
+.upvote{
+	font-size: 34px;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+.downvote{
+	  font-size: 12px;
+  font-weight: 700;
+  margin-left: 14px;
+  padding-top: 5px;
+
+}
+
+.voteimg {
+	height:22px;
+	width: 11px;
+	margin-right: 2px;	
+}
+
+h5{
+	font-size: 14px;
+	font-weight: 700;
+	color: #404e5c;	
+	padding-top: 3px;
+}
+
+h3{
+	font-size: 15px;	
+}
+
+.hoofdeffect{
+	margin-top: 5px;	
 }
