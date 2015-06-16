@@ -16,6 +16,7 @@ ul#results > li > div.productinfo {
 ul#results > li > div.productinfo > h2, ul#results > li > div.productinfo > .hoofdeffect > h3, ul#results > li > div.productinfo > .bijeffect > h4, ul#results > li > div.productinfo {
 	font-weight: 300;
 	display: inline-block;
+	  margin-top: 8px;
 	
 }
 
