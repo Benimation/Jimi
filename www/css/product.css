@@ -7,15 +7,22 @@
 }
 
 #productnavigatie h2{
-	text-align:center;	
-	color: #404e5c;
-	font-size: 24px;
-	  padding-top: 10px;
+	background-color: #404E5C;
+  color: #FFF;
+  text-align: center;
+  height: 32px;
+  font-size: 16px;
+  line-height: 32px;
+  position: fixed;
+  width: 100%;
+  top: 70px;
+  opacity: .98;
+    font-weight: 400;
 }
 
 #foto{
 	width: 100%;
-  height: 295px;
+  height: 335px;
   border: hidden;
   background-image: url("../img/product/1groot.jpg");
   background-size: contain;
@@ -93,8 +100,9 @@
 
 .tab {
 	display: none;
-	font-size: 12px;
-  	line-height: 20px;
+	font-size: 16px;
+  line-height: 26px;
+  font-weight: 300;
 	
 }
 
@@ -124,6 +132,33 @@
 	background-image: url("../img/iconen/empty.png");
 	list-style: none;
 	
+}
+
+.stem{
+	color: #fff;
+  	background-color: #404e5c;
+  	padding: 7px 10px;
+  	float: right;
+  	line-height: 16px;
+	margin-top: 27px;
+	font-size: 14px;
+	border-radius: 5px;
+}
+
+.score{
+	font-size: 30px;
+  font-weight: 700;	
+  color: #bc003b;
+  margin-top:-13px;
+  margin-bottom:10px;
+}
+
+.upvoteproduct{
+	float: left;
+	margin-right: 20px;
+}
+
+.downvoteproduct{
 }
 
 #tabs #effecten > ul > li.droom {
@@ -199,6 +234,18 @@
 }
 
 
+/* Gebruik tab */
+#tabs #gebruik {
+	padding: 10px;
+	
+}
+
+/* waarschuwing tab */
+#tabs #waarschuwing {
+	padding: 10px;
+	
+}
+
 
 
 
@@ -215,28 +262,3 @@
   background: #fff;	
 }
 
-.stem{
-	color: #fff;
-  	background-color: #404e5c;
-  	padding: 7px 10px;
-  	float: right;
-  	line-height: 16px;
-	margin-top: 24px;
-	font-size: 14px;
-	border-radius: 5px;
-}
-
-.score{
-	font-size: 30px;
-  font-weight: 700;	
-  color: #bc003b;
-  margin-top:-13px;
-}
-
-.upvoteproduct{
-	float: left;
-	margin-right: 20px;
-}
-
-.downvoteproduct{
-}
