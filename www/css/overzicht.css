@@ -16,7 +16,6 @@ ul#results > li > div.productinfo {
 ul#results > li > div.productinfo > h2, ul#results > li > div.productinfo > .hoofdeffect > h3, ul#results > li > div.productinfo > .bijeffect > h4, ul#results > li > div.productinfo {
 	font-weight: 300;
 	display: inline-block;
-	  margin-top: 5px;
 	
 }
 
@@ -88,14 +87,25 @@ h5{
 	padding-top: 3px;
 }
 
+
 h3{
-	font-size: 15px;	
+	font-size: 16px;
+ 	width: 50%;	
 }
 
 h2{
-	font-size: 18px;	
+	font-size: 22px;
+	margin-top: 10px;	
 }
 
 .hoofdeffect{
+	margin-top: 5px;	
+}
+
+.bijh4{
+	margin-top: -5px;!important		
+}
+
+.hoofdh3{
 	margin-top: 5px;	
 }

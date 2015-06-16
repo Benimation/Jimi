@@ -10,29 +10,30 @@
 	text-align:center;	
 	color: #404e5c;
 	font-size: 24px;
+	  padding-top: 10px;
 }
 
 #foto{
 	width: 100%;
-	height: 356px;
-	border: hidden;
-	background-image:url("../img/product/1groot.jpg");
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;	
+  height: 295px;
+  border: hidden;
+  background-image: url("../img/product/1groot.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #tabs{
 	width:100%;
 	height: auto;
-	outline: 1px solid;	
+	border-top: 1px solid;	
 }
 
 #tabmenu > li {
 	display: inline-block;
 	font-size: 12px;
 	width: 24.25%;
-	outline: 1px solid #808080;
+	/*outline: 1px solid #808080;*/
 	height: 32px;
 	line-height: 32px;
 	cursor: pointer;
@@ -110,7 +111,7 @@
 
 /* Effecten tab */
 #tabs #effecten > ul > li {
-	line-height: 58px;
+	line-height: 44px;
 	font-weight: 300;
 	font-size: 16px;
 	border-bottom: 1px solid #BC003B;
@@ -190,9 +191,10 @@
 }
 
 .koopbutton {
-	position: absolute;
-	top: 380px;
-	left: 15px;
+	  position: absolute;
+  top: 320px;
+  left: 15px;
+
 	
 }
 
@@ -205,4 +207,36 @@
 #tabs #beschrijving {
 	padding: 10px;
 	
+}
+
+#tabmenu{
+	border-top: 1px solid;
+  margin-top: -20px;
+  background: #fff;	
+}
+
+.stem{
+	color: #fff;
+  	background-color: #404e5c;
+  	padding: 7px 10px;
+  	float: right;
+  	line-height: 16px;
+	margin-top: 24px;
+	font-size: 14px;
+	border-radius: 5px;
+}
+
+.score{
+	font-size: 30px;
+  font-weight: 700;	
+  color: #bc003b;
+  margin-top:-13px;
+}
+
+.upvoteproduct{
+	float: left;
+	margin-right: 20px;
+}
+
+.downvoteproduct{
 }
