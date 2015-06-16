@@ -30,10 +30,10 @@ ul#results > li {
 	
 }
 
-ul#results > li > div.productinfo > .bijeffect, ul#results > li > div.productinfo > .hoofdeffect {
+/*ul#results > li > div.productinfo > .bijeffect, ul#results > li > div.productinfo > .hoofdeffect {
 	margin-right: 22px;
 	
-}
+}*/
 
 ul#results > li > div.productinfo > .hoofdeffect {
 	/*background-color: #bc003b;
@@ -60,16 +60,18 @@ ul#results .upvote, .downvote {
 }
 
 .upvote{
-	font-size: 34px;
-  font-weight: 700;
-  line-height: 30px;
+	font-size: 26px;
+	font-weight: 700;
+	line-height: 30px;
+	
 }
 
 .downvote{
-	  font-size: 12px;
-  font-weight: 700;
-  margin-left: 14px;
-  padding-top: 5px;
+	font-size: 12px;
+	font-weight: 700;
+	margin-left: 8px;
+	padding-top: 3px;
+	margin-right: 18px;
 
 }
 
@@ -88,6 +90,10 @@ h5{
 
 h3{
 	font-size: 15px;	
+}
+
+h2{
+	font-size: 18px;	
 }
 
 .hoofdeffect{
