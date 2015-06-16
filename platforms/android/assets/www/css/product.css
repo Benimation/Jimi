@@ -7,8 +7,9 @@
 }
 
 #productnavigatie h2{
-	background-color: #404E5C;
-  color: #FFF;
+	background-image: url("../img/header.png");
+		background-size: cover;
+  color: #fff;
   text-align: center;
   height: 32px;
   font-size: 16px;
@@ -136,7 +137,7 @@
 
 .stem{
 	color: #fff;
-  	background-color: #404e5c;
+  	background-color: #bbb6df;
   	padding: 7px 10px;
   	float: right;
   	line-height: 16px;

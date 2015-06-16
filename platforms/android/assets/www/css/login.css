@@ -38,7 +38,7 @@
   	border: hidden;	
 	font-family: "lato", 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;	
 	font-weight: 300;
-	color: #526173;
+	color: #fff;
 	line-height: 36px;
 }
 
@@ -47,23 +47,23 @@
 
 hr{
 	width: 100%;
-	border-color: #526173	
+	border-color: #fff;	
 }
 
 ::-webkit-input-placeholder {
-   color: #526173;
+   color: #fff;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #526173;  
+   color: #fff;  
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #526173;  
+   color: #fff;  
 }
 
 :-ms-input-placeholder {  
-   color: #526173;  
+   color: #fff;  
 }
 
 #button{
