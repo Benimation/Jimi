@@ -4,7 +4,11 @@
 	
     <div id="logoLogin"></div>
     
-    <div id="tuttekst"></div>
+    <div id="tuttekst">
+    
+    <h1>Doel</h1>
+    <p>Het doel van deze applicatie is om de eindgebruiker van de beste informatie te voorzien op het gebied van alternatieve (genees)middelen.</p>
+    </div>
     
     <ul id="tuttabs">
     	<li></li>
@@ -33,15 +37,10 @@ $("#kruisje").click(function(e) {
 
 // sliding
 var pagenum = 1;
-var issliding = false;
-var slidespeed = 700;
-
-$("#tuttekst").load("pages/tut/" + pagenum + ".html");
 
 function posterslide(direction) {
 	if (!issliding) {
 		issliding = true;
-		pagenum++;
 
 		$("#tuttekst").addClass("prevpost");
 		$("#tuttekst").after('<section id="tuttekst" class="nextpost"></section>');

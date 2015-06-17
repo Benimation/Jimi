@@ -18,7 +18,7 @@
 }
 
 #tuttekst{
-	width: 70%;
+	width: 100%;
   color: #fff;
   margin-left: auto;
   margin-right: auto;	
@@ -33,6 +33,7 @@
   line-height: 25px;
   text-align: justify;
   font-weight: 300;
+  padding: 0 15%;
 }
 
 #tuttabs > li {
