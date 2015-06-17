@@ -1,0 +1,60 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#tutorialcontainer{
+	width: 100%;
+	height: 100%;
+	background-image:url("../img/tutorial.png");	
+	background-size: cover;
+}
+
+#kruisje{
+	color:#fff;
+	font-weight: 300;
+	font-size: 18px;
+	float: right;
+	margin-top: 20px;
+  margin-right: 20px;	
+}
+
+#tuttekst{
+	width: 70%;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;	
+}
+
+#tuttekst > h1{
+	text-align: center;	
+}
+
+#tuttekst > p{
+	  font-size: 16px;
+  line-height: 25px;
+  text-align: justify;
+  font-weight: 300;
+}
+
+#tuttabs > li {
+	    width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 5px;
+  opacity: 0.5;	
+}
+
+#tuttabs{
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  left: auto;
+  right: auto;
+  bottom: 17px;
+  text-align: center;
+  }
+  
+  #tuttabs > li:nth-child(1){
+		opacity: 1;  
+  }

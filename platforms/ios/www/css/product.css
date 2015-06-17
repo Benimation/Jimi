@@ -138,7 +138,8 @@
 
 .stem{
 	color: #fff;
-  	background-color: #bbb6df;
+  	background-image: url("../img/navbar.png");
+		background-size: cover;	
   	padding: 7px 10px;
   	float: right;
   	line-height: 16px;
