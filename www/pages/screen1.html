@@ -31,17 +31,107 @@ $("#kruisje").click(function(e) {
 
 
 
-// sliding
+// slider settings
 var pagenum = 1;
 var issliding = false;
 var slidespeed = 700;
 
+
+
+// slide event listeners
+$("#tutorialcontainer").on("swipeleft", function(e) {
+	posterslide("left");
+    
+});
+$("#tutorialcontainer").on("swiperight", function(e) {
+	posterslide("right");
+    
+});
+
+$("#tuttabs>li:nth-child(1)").click(function(e) {
+	if (pagenum != 1) {
+		pagenum = 0;
+		posterslide("right");
+		
+		$("#tuttabs>li").css("opacity", "0.5");
+		$(this).css("opacity", "1");
+		
+	}
+    
+});
+$("#tuttabs>li:nth-child(2)").click(function(e) {
+	if (pagenum != 2) {
+		if (pagenum < 2) {
+			pagenum = 1;
+			posterslide("left");
+			
+		} else {
+			pagenum = 1;
+			posterslide("right");
+			
+		}
+		
+		$("#tuttabs>li").css("opacity", "0.5");
+		$(this).css("opacity", "1");
+		
+	}
+    
+});
+$("#tuttabs>li:nth-child(3)").click(function(e) {
+	if (pagenum != 3) {
+			if (pagenum < 3) {
+			pagenum = 3;
+			posterslide("left");
+			
+		} else {
+			pagenum = 1;
+			posterslide("right");
+			
+		}
+		
+		$("#tuttabs>li").css("opacity", "0.5");
+		$(this).css("opacity", "1");
+		
+	}
+    
+});
+$("#tuttabs>li:nth-child(4)").click(function(e) {
+	if (pagenum != 4) {
+		pagenum = 3;
+		posterslide("left");
+		
+		$("#tuttabs>li").css("opacity", "0.5");
+		$(this).css("opacity", "1");
+		
+	}
+    
+});
+
+
+
+// sliding
 $("#tuttekst").load("pages/tut/" + pagenum + ".html");
 
 function posterslide(direction) {
 	if (!issliding) {
 		issliding = true;
-		pagenum++;
+		
+		
+		// decide page
+		if (direction == "left" && pagenum != 4) {
+			pagenum++;
+			
+		} else if (direction == "right" && pagenum == 1) {
+			pagenum = 4;
+			
+		} else if (direction == "left" && pagenum == 4) {
+			pagenum = 1;
+			
+		} else {
+			pagenum--;
+			
+		}
+
 
 		$("#tuttekst").addClass("prevpost");
 		$("#tuttekst").after('<section id="tuttekst" class="nextpost"></section>');

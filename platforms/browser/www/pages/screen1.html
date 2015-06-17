@@ -31,11 +31,62 @@ $("#kruisje").click(function(e) {
 
 
 
-// sliding
+// slider settings
 var pagenum = 1;
 var issliding = false;
 var slidespeed = 700;
 
+
+
+// slide event listeners
+$("#tuttabs>li:nth-child(1)").click(function(e) {
+	if (pagenum != 1) {
+		pagenum = 1;
+		posterslide("right");
+		
+		$("#tuttabs>li").css("opacity", "0.5");
+		$(this).css("opacity", "1");
+		
+	}
+    
+});
+$("#tuttabs>li:nth-child(2)").click(function(e) {
+	if (pagenum != 2) {
+		pagenum = 2;
+		posterslide("right");
+		
+		$("#tuttabs>li").css("opacity", "0.5");
+		$(this).css("opacity", "1");
+		
+	}
+    
+});
+$("#tuttabs>li:nth-child(1)").click(function(e) {
+	if (pagenum != 3) {
+		pagenum = 3;
+		posterslide("right");
+		
+		$("#tuttabs>li").css("opacity", "0.5");
+		$(this).css("opacity", "1");
+		
+	}
+    
+});
+$("#tuttabs>li:nth-child(1)").click(function(e) {
+	if (pagenum != 4) {
+		pagenum = 4;
+		posterslide("right");
+		
+		$("#tuttabs>li").css("opacity", "0.5");
+		$(this).css("opacity", "1");
+		
+	}
+    
+});
+
+
+
+// sliding
 $("#tuttekst").load("pages/tut/" + pagenum + ".html");
 
 function posterslide(direction) {

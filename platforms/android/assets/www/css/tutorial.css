@@ -37,13 +37,15 @@
 }
 
 #tuttabs > li {
-	    width: 8px;
-  height: 8px;
-  background-color: #fff;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 5px;
-  opacity: 0.5;	
+	width: 8px;
+	height: 8px;
+	background-color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	margin: 5px;
+	opacity: 0.5;
+	transition: 100ms opacity ease-in-out;
+	
 }
 
 #tuttabs{

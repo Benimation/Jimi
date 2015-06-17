@@ -4,11 +4,7 @@
 	
     <div id="logoLogin"></div>
     
-    <div id="tuttekst">
-    
-    <h1>Doel</h1>
-    <p>Het doel van deze applicatie is om de eindgebruiker van de beste informatie te voorzien op het gebied van alternatieve (genees)middelen.</p>
-    </div>
+    <div id="tuttekst"></div>
     
     <ul id="tuttabs">
     	<li></li>
@@ -35,12 +31,68 @@ $("#kruisje").click(function(e) {
 
 
 
-// sliding
+// slider settings
 var pagenum = 1;
+var issliding = false;
+var slidespeed = 700;
+
+
+
+// slide event listeners
+$("#tuttabs>li:nth-child(1)").click(function(e) {
+	if (pagenum != 1) {
+		pagenum = 1;
+		posterslide("right");
+		
+		$("#tuttabs>li").css("opacity", "0.5");
+		$(this).css("opacity", "1");
+		
+	}
+    
+});
+$("#tuttabs>li:nth-child(2)").click(function(e) {
+	if (pagenum != 2) {
+		pagenum = 2;
+		posterslide("right");
+		
+		$("#tuttabs>li").css("opacity", "0.5");
+		$(this).css("opacity", "1");
+		
+	}
+    
+});
+$("#tuttabs>li:nth-child(1)").click(function(e) {
+	if (pagenum != 3) {
+		pagenum = 3;
+		posterslide("right");
+		
+		$("#tuttabs>li").css("opacity", "0.5");
+		$(this).css("opacity", "1");
+		
+	}
+    
+});
+$("#tuttabs>li:nth-child(1)").click(function(e) {
+	if (pagenum != 4) {
+		pagenum = 4;
+		posterslide("right");
+		
+		$("#tuttabs>li").css("opacity", "0.5");
+		$(this).css("opacity", "1");
+		
+	}
+    
+});
+
+
+
+// sliding
+$("#tuttekst").load("pages/tut/" + pagenum + ".html");
 
 function posterslide(direction) {
 	if (!issliding) {
 		issliding = true;
+		pagenum++;
 
 		$("#tuttekst").addClass("prevpost");
 		$("#tuttekst").after('<section id="tuttekst" class="nextpost"></section>');
