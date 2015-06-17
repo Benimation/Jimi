@@ -70,7 +70,8 @@ hr{
 	width: 90%;
 	text-align: center;
 	color: #fff;
-	background-color: #bc003b;
+	background-image: url("../img/header.png");
+		background-size: cover;	
 	margin-left: auto;
 	margin-right: auto;
 	padding: 15px 0px;

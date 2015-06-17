@@ -157,7 +157,9 @@ body{
 }
 
 .titlebanner {
-	background:#434e5d;
+	background-image: url("../img/navbar.png");
+		background-size: cover;	
+	
 	color: #fff;
 	text-align: center;
 	height: 32px;

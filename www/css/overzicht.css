@@ -109,3 +109,15 @@ h2{
 .hoofdh3{
 	margin-top: 5px;	
 }
+
+.zoekbalk{
+	  width: 100%;
+  text-align: center;
+  background-color: #e3e3e3;
+  padding: 9px 0px;
+  background-image: url("../img/iconen/zoeken.png");
+  background-repeat: no-repeat;
+  background-position: 96% center, 4%;
+  background-size: 23px auto, 32px auto;
+  font-weight: 300;
+}

@@ -157,7 +157,9 @@ body{
 }
 
 .titlebanner {
-	background:#434e5d;
+	background-image: url("../img/navbar.png");
+		background-size: cover;	
+	
 	color: #fff;
 	text-align: center;
 	height: 32px;
@@ -189,7 +191,7 @@ body{
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 63px;
-	right: 11px;
+	right: 0px;
 	margin: 11px;
 	cursor: pointer;
 }
