@@ -53,9 +53,6 @@ $("#tuttabs>li:nth-child(1)").click(function(e) {
 		pagenum = 0;
 		posterslide("right");
 		
-		$("#tuttabs>li").css("opacity", "0.5");
-		$(this).css("opacity", "1");
-		
 	}
     
 });
@@ -70,9 +67,6 @@ $("#tuttabs>li:nth-child(2)").click(function(e) {
 			posterslide("right");
 			
 		}
-		
-		$("#tuttabs>li").css("opacity", "0.5");
-		$(this).css("opacity", "1");
 		
 	}
     
@@ -89,9 +83,6 @@ $("#tuttabs>li:nth-child(3)").click(function(e) {
 			
 		}
 		
-		$("#tuttabs>li").css("opacity", "0.5");
-		$(this).css("opacity", "1");
-		
 	}
     
 });
@@ -99,9 +90,6 @@ $("#tuttabs>li:nth-child(4)").click(function(e) {
 	if (pagenum != 4) {
 		pagenum = 3;
 		posterslide("left");
-		
-		$("#tuttabs>li").css("opacity", "0.5");
-		$(this).css("opacity", "1");
 		
 	}
     
@@ -131,6 +119,9 @@ function posterslide(direction) {
 			pagenum--;
 			
 		}
+		
+		$("#tuttabs>li").css("opacity", "0.5");
+		$("#tuttabs>li:nth-child(" + pagenum + ")").css("opacity", "1");
 
 
 		$("#tuttekst").addClass("prevpost");
