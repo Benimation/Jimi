@@ -131,7 +131,7 @@ function posterslide(direction) {
 			// slide animation
 			if (direction == "left") {
 				$(".nextpost").css("position", "relative");
-				$(".nextpost").css("top", "-100%");
+				$(".nextpost").css("top", -1 * $(".prevpost").height());
 				$(".nextpost").css("right", "-100%");
 
 				$(".prevpost").css("position", "relative");
@@ -160,7 +160,7 @@ function posterslide(direction) {
 
 			} else if (direction == "right") {
 				$(".nextpost").css("position", "relative");
-				$(".nextpost").css("top", "-100%");
+				$(".nextpost").css("top", -1 * $(".prevpost").height());
 				$(".nextpost").css("right", "100%");
 
 				$(".prevpost").css("position", "relative");
