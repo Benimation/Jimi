@@ -69,7 +69,8 @@ body{
 
 #container {
 	opacity: 0;
-	transition: 100ms opacity ease-in-out;
+	transition: 100ms opacity ease-in-out, -webkit-filter 100ms ease-out, filter 100ms ease-out;
+	will-change: -webkit-filter, filter;
 	height: 100%;
 	
 }

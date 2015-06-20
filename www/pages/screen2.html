@@ -11,7 +11,7 @@
 <ul id="categories">
 	<li class="droom">Droomopwekkend</li>
     <li class="geest">Geestverruimend</li>
-    <li class="hallu">Hallucinerend</li>
+    <li class="hallu">Hallucineren</li>
     <li class="concen">Concentratie</li>
     <li class="ener">Energie</li>
     <li class="lust">Lustopwekkend</li>
@@ -21,6 +21,17 @@
 </div>
 <script>
 var gekozencategorie = "";
+var zoekopdracht = "";
+
+$(".zoekbalk").click(function(e) {
+	zoekopdracht = prompt("Vul je zoekopdracht in");
+	
+	if (zoekopdracht != "") {
+		loadResultPage();
+		
+	}
+    
+});
 
 $("#categories > li.droom").click(function(e) {
 	gekozencategorie = "Droomopwekkend";
@@ -37,7 +48,7 @@ $("#categories > li.geest").click(function(e) {
 });
 
 $("#categories > li.hallu").click(function(e) {
-	gekozencategorie = "Hallucinerend";
+	gekozencategorie = "Hallucineren";
 	
 	loadResultPage();
 	
@@ -80,10 +91,14 @@ $("#categories > li.ontspan").click(function(e) {
 
 function loadResultPage() {
 	$("#container").css("opacity", "0");
+	$("#container").css("-webkit-filter", "blur(5px)");
+	$("#container").css("filter", "blur(5px)");
 	
 	setTimeout(function() {
 		$("#container").load("pages/screen3.html", function() {
 			$("#container").css("opacity", "1");
+			$("#container").css("-webkit-filter", "blur(0)");
+			$("#container").css("filter", "blur(0)");
 			
 		});
 	}, 100);
@@ -98,11 +113,15 @@ $(window).resize(function(e) {
 });
 
 $("#back").click(function(e) {
-  $("#container").css("opacity", "0");
+	$("#container").css("opacity", "0");
+	$("#container").css("-webkit-filter", "blur(5px)");
+	$("#container").css("filter", "blur(5px)");
 	
     setTimeout(function() {
 		$("#container").load("pages/screen1.html", function() {
 			$("#container").css("opacity", "1");
+			$("#container").css("-webkit-filter", "blur(0)");
+			$("#container").css("filter", "blur(0)");
 			
 		});
 	}, 100);
