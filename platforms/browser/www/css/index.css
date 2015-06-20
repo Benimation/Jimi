@@ -38,6 +38,7 @@ body{
 	text-align: center;
 	opacity: 1;
 	transition: 100ms opacity ease-in-out;
+	transition: 50ms margin-right ease-in-out;
 	
 }
 
