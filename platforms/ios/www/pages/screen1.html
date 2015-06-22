@@ -19,10 +19,14 @@
 <script>
 $("#kruisje").click(function(e) {
 	$("#container").css("opacity", "0");
+	$("#container").css("-webkit-filter", "blur(5px)");
+	$("#container").css("filter", "blur(5px)");
 	
     setTimeout(function() {
 		$("#container").load("pages/screen2.html", function() {
 			$("#container").css("opacity", "1");
+			$("#container").css("-webkit-filter", "blur(0)");
+			$("#container").css("filter", "blur(0)");
 			
 		});
 	}, 100);
@@ -131,7 +135,7 @@ function posterslide(direction) {
 			// slide animation
 			if (direction == "left") {
 				$(".nextpost").css("position", "relative");
-				$(".nextpost").css("top", "-100%");
+				$(".nextpost").css("top", -1 * $(".prevpost").height());
 				$(".nextpost").css("right", "-100%");
 
 				$(".prevpost").css("position", "relative");
@@ -160,7 +164,7 @@ function posterslide(direction) {
 
 			} else if (direction == "right") {
 				$(".nextpost").css("position", "relative");
-				$(".nextpost").css("top", "-100%");
+				$(".nextpost").css("top", -1 * $(".prevpost").height());
 				$(".nextpost").css("right", "100%");
 
 				$(".prevpost").css("position", "relative");

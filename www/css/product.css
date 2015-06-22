@@ -1,6 +1,24 @@
 @charset "UTF-8";
 /* created by Benimation */
 
+.alert{
+	position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000f23;
+  opacity: .95;	
+}
+
+#loginalert{
+	width: 80%;
+  height: auto;
+  background: #fff;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-weight: 300;	
+}
+
 #productnavigatie{
 	width: 100%;
 	height: auto;	
@@ -9,7 +27,7 @@
 #productnavigatie h2{
 	background-image: url("../img/navbar.png");
 		background-size: cover;	
-	
+	border-bottom: 2px solid #8e979e;
   color: #fff;
   text-align: center;
   height: 32px;
@@ -27,7 +45,8 @@
 	height: 260px;
 	border: hidden;
 	background-image: url("../img/product/1groot.jpg");
-	background-size: 110%;
+	/*background-size: 110%;*/
+	background-size: 186%;
 	background-repeat: no-repeat;
 	background-position: center;
 	
@@ -36,7 +55,7 @@
 #tabs{
 	width:100%;
 	height: auto;
-	border-top: 1px solid;	
+	border-top: 1px solid #8e979e;	
 }
 
 #tabmenu > li {
@@ -147,6 +166,7 @@
 	margin-top: 27px;
 	font-size: 14px;
 	border-radius: 5px;
+	cursor: pointer;
 }
 
 .score{
@@ -208,7 +228,7 @@
 
 
 #tabs #effecten > ul > li > .upvote, #tabs #effecten > ul > li > .downvote {
-	padding: 0px 10px 0 18px
+	padding: 0px 10px 0 18px;
 	display: inline-block;
 	float: right;
 	background-size: 16px;
@@ -261,7 +281,7 @@
 }
 
 #tabmenu{
-	border-top: 1px solid;
+	border-top: 1px solid #8e979e;
   margin-top: -20px;
   background: #fff;	
 }

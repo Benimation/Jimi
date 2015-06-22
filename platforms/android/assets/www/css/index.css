@@ -38,6 +38,7 @@ body{
 	text-align: center;
 	opacity: 1;
 	transition: 100ms opacity ease-in-out;
+	transition: 50ms margin-right ease-in-out;
 	
 }
 
@@ -68,7 +69,8 @@ body{
 
 #container {
 	opacity: 0;
-	transition: 100ms opacity ease-in-out;
+	transition: 100ms opacity ease-in-out, -webkit-filter 100ms ease-out, filter 100ms ease-out;
+	will-change: -webkit-filter, filter;
 	height: 100%;
 	
 }
@@ -169,7 +171,7 @@ body{
 .titlebanner {
 	background-image: url("../img/navbar.png");
 		background-size: cover;	
-	
+	border-bottom: 2px solid #8e979e;
 	color: #fff;
 	text-align: center;
 	height: 32px;
