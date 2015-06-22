@@ -1,11 +1,11 @@
 <div id="tutorialcontainer">
 
-	<div id="kruisje">X</div>
+	<div id="kruisje">skip</div>
 	
     <div id="logoLogin"></div>
     
     <div id="tuttekst"></div>
-    
+  
     <ul id="tuttabs">
     	<li></li>
         <li></li>
@@ -39,46 +39,57 @@ var slidespeed = 700;
 
 
 // slide event listeners
+$("#tutorialcontainer").on("swipeleft", function(e) {
+	posterslide("left");
+    
+});
+$("#tutorialcontainer").on("swiperight", function(e) {
+	posterslide("right");
+    
+});
+
 $("#tuttabs>li:nth-child(1)").click(function(e) {
 	if (pagenum != 1) {
-		pagenum = 1;
+		pagenum = 0;
 		posterslide("right");
-		
-		$("#tuttabs>li").css("opacity", "0.5");
-		$(this).css("opacity", "1");
 		
 	}
     
 });
 $("#tuttabs>li:nth-child(2)").click(function(e) {
 	if (pagenum != 2) {
-		pagenum = 2;
-		posterslide("right");
-		
-		$("#tuttabs>li").css("opacity", "0.5");
-		$(this).css("opacity", "1");
+		if (pagenum < 2) {
+			pagenum = 1;
+			posterslide("left");
+			
+		} else {
+			pagenum = 1;
+			posterslide("right");
+			
+		}
 		
 	}
     
 });
-$("#tuttabs>li:nth-child(1)").click(function(e) {
+$("#tuttabs>li:nth-child(3)").click(function(e) {
 	if (pagenum != 3) {
-		pagenum = 3;
-		posterslide("right");
-		
-		$("#tuttabs>li").css("opacity", "0.5");
-		$(this).css("opacity", "1");
+			if (pagenum < 3) {
+			pagenum = 3;
+			posterslide("left");
+			
+		} else {
+			pagenum = 1;
+			posterslide("right");
+			
+		}
 		
 	}
     
 });
-$("#tuttabs>li:nth-child(1)").click(function(e) {
+$("#tuttabs>li:nth-child(4)").click(function(e) {
 	if (pagenum != 4) {
-		pagenum = 4;
-		posterslide("right");
-		
-		$("#tuttabs>li").css("opacity", "0.5");
-		$(this).css("opacity", "1");
+		pagenum = 3;
+		posterslide("left");
 		
 	}
     
@@ -92,7 +103,26 @@ $("#tuttekst").load("pages/tut/" + pagenum + ".html");
 function posterslide(direction) {
 	if (!issliding) {
 		issliding = true;
-		pagenum++;
+		
+		
+		// decide page
+		if (direction == "left" && pagenum != 4) {
+			pagenum++;
+			
+		} else if (direction == "right" && pagenum == 1) {
+			pagenum = 4;
+			
+		} else if (direction == "left" && pagenum == 4) {
+			pagenum = 1;
+			
+		} else {
+			pagenum--;
+			
+		}
+		
+		$("#tuttabs>li").css("opacity", "0.5");
+		$("#tuttabs>li:nth-child(" + pagenum + ")").css("opacity", "1");
+
 
 		$("#tuttekst").addClass("prevpost");
 		$("#tuttekst").after('<section id="tuttekst" class="nextpost"></section>');

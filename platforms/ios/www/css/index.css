@@ -6,6 +6,16 @@
 	
 }
 
+.ui-page {
+	height: 100%;
+	
+}
+
+.ui-loader {
+	display: none;
+	
+}
+
 * {
 	margin: 0;
 	padding: 0;

@@ -9,19 +9,21 @@
 }
 
 #kruisje{
-	color:#fff;
-	font-weight: 300;
-	font-size: 18px;
-	float: right;
-	margin-top: 20px;
-  margin-right: 20px;	
+	  position: absolute;
+	  z-index:15;
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  float: right;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
 }
 
 #tuttekst{
 	width: 100%;
   color: #fff;
-  margin-left: auto;
-  margin-right: auto;	
+  height: 0;	
 }
 
 #tuttekst > h1{
@@ -31,9 +33,9 @@
 #tuttekst > p{
 	font-size: 16px;
 	line-height: 25px;
-	text-align: justify;
 	font-weight: 300;
 	padding: 0 15%;
+	text-align:justify;
 	
 }
 
@@ -63,3 +65,23 @@
   #tuttabs > li:nth-child(1){
 		opacity: 1;  
   }
+  
+  .stemspan{
+	color: #fff;
+  	background-image: url("../img/navbar.png");
+		background-size: cover;	
+  	padding: 7px 10px;
+  	line-height: 16px;
+	font-size: 14px;
+	border-radius: 5px;
+	  margin-left: 5px;
+  margin-right: 5px;
+
+}
+
+.regist{
+	  display: block;
+  text-align: center;
+  font-weight: 700;
+  font-size: 22px;
+}
