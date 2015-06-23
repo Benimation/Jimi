@@ -25,7 +25,7 @@
 	<li id="effecten">Effecten</li>
     <li id="beschrijving">Beschrijving</li>
     <li id="gebruik">Gebruik</li>
-    <li id="waarschuwing">Kopen</li>
+    <li id="koop">Kopen</li>
 </ul>
 
 <div id="tabs">
@@ -52,7 +52,7 @@
         
     </div>
     
-    <div id="waarschuwing" class="tab">
+    <div id="koop" class="tab">
     	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ipsum tempus, scelerisque justo elementum, tincidunt justo. Ut imperdiet sollicitudin lacus, id efficitur dolor scelerisque eget. Phasellus lorem massa, luctus id justo eget, vestibulum cursus ante. Vestibulum quis turpis nulla. Duis id tempor lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam venenatis, diam id tincidunt scelerisque, mauris lorem ultricies ipsum, id ultricies felis tellus id ipsum. Proin quam augue, accumsan ultricies condimentum quis, mattis pellentesque arcu. Integer et nunc velit. Nullam nunc dolor, pulvinar sed est nec, fermentum hendrerit orci. Praesent quis justo tristique, scelerisque nibh in, ultricies felis.</p>
         
     </div>
@@ -105,12 +105,12 @@ $("#tabmenu > li#effecten").click(function(e) {
 	$(this).addClass("activetab");
 	$("#tabmenu > li#beschrijving").removeClass("activetab");
 	$("#tabmenu > li#gebruik").removeClass("activetab");
-	$("#tabmenu > li#waarschuwing").removeClass("activetab");
+	$("#tabmenu > li#koop").removeClass("activetab");
 	
 	$("#tabs > div#effecten").css("display", "block");
 	$("#tabs > div#beschrijving").css("display", "none");
 	$("#tabs > div#gebruik").css("display", "none");
-	$("#tabs > div#waarschuwing").css("display", "none");
+	$("#tabs > div#koop").css("display", "none");
     
 });
 
@@ -119,12 +119,12 @@ $("#tabmenu > li#beschrijving").click(function(e) {
 	$(this).addClass("activetab");
 	$("#tabmenu > li#effecten").removeClass("activetab");
 	$("#tabmenu > li#gebruik").removeClass("activetab");
-	$("#tabmenu > li#waarschuwing").removeClass("activetab");
+	$("#tabmenu > li#koop").removeClass("activetab");
 	
 	$("#tabs > div#effecten").css("display", "none");
 	$("#tabs > div#beschrijving").css("display", "block");
 	$("#tabs > div#gebruik").css("display", "none");
-	$("#tabs > div#waarschuwing").css("display", "none");
+	$("#tabs > div#koop").css("display", "none");
     
 });
 
@@ -133,19 +133,19 @@ $("#tabmenu > li#gebruik").click(function(e) {
 	$(this).addClass("activetab");
 	$("#tabmenu > li#beschrijving").removeClass("activetab");
 	$("#tabmenu > li#effecten").removeClass("activetab");
-	$("#tabmenu > li#waarschuwing").removeClass("activetab");
+	$("#tabmenu > li#koop").removeClass("activetab");
 	
 	$("#tabs > div#effecten").css("display", "none");
 	$("#tabs > div#beschrijving").css("display", "none");
 	$("#tabs > div#gebruik").css("display", "block");
-	$("#tabs > div#waarschuwing").css("display", "none");
+	$("#tabs > div#koop").css("display", "none");
     
 });
 $("#tabs > #gebruik > p").html(thisgebruik);
 $("#tabs > #beschrijving > p").html(thisproductdata.beschrijving + '<p class="warning">' + thisproductdata.waarschuwing + "</p>");
 
-// waarschuwing
-$("#tabmenu > li#waarschuwing").click(function(e) {
+// kopen
+$("#tabmenu > li#koop").click(function(e) {
 	$(this).addClass("activetab");
 	$("#tabmenu > li#beschrijving").removeClass("activetab");
 	$("#tabmenu > li#gebruik").removeClass("activetab");
@@ -154,7 +154,7 @@ $("#tabmenu > li#waarschuwing").click(function(e) {
 	$("#tabs > div#effecten").css("display", "none");
 	$("#tabs > div#beschrijving").css("display", "none");
 	$("#tabs > div#gebruik").css("display", "none");
-	$("#tabs > div#waarschuwing").css("display", "block");
+	$("#tabs > div#koop").css("display", "block");
     
 });
 

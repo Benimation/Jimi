@@ -139,13 +139,13 @@ cursor: pointer;
 	
 }
 
-#tabmenu > li#waarschuwing {
-	background-image: url("../img/iconen/waarschuwing.png");
+#tabmenu > li#koop {
+	background-image: url("../img/iconen/koop.png");
 	
 }
 
-#tabmenu > li#waarschuwing.activetab {
-	background-image: url("../img/iconen/witwaarschuwing.png");
+#tabmenu > li#koop.activetab {
+	background-image: url("../img/iconen/witkoop.png");
 	
 }
 
@@ -294,7 +294,7 @@ cursor: pointer;
 }
 
 /* waarschuwing tab */
-#tabs #waarschuwing {
+#tabs #koop {
 	padding: 10px;
 	
 }
