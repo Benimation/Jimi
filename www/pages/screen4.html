@@ -9,13 +9,23 @@
 
 <div class="contentcontainer">
 
-      <div class="alert">
+      <div class="alert" id="notloggedin">
             <div id="loginalert">
             <h3>Oeps..</h3>
             Om te kunnen stemmen dien je ingelogd te zijn.<br />
              <span id="annuleren">Annuleren</span><span id="inloggen">Inloggen</span>
             </div>
-        </div>
+            
+      </div>
+      
+      <div class="alert" id="submitvote">
+            <div id="votealert">
+            <h3>Stemmen</h3>
+            Heb je dit effect ervaren?<br />
+             <span id="votedown">Nee</span><span id="voteup">Ja</span>
+            </div>
+            
+      </div>
 
 <div id="foto"></div>
 
@@ -69,30 +79,6 @@
 // gekozen product weergeven
 var thisproductnaam = thisproductdata.name;
 var thisgebruik = thisproductdata.gebruik;
-
-/*switch (gekozenproduct) {
-	case 0:
-		thisproductnaam = "error";
-		thisgebruik = "error";
-		break;
-	case 1:
-		thisproductnaam = "Salvia Divinorum";
-		thisgebruik = "roken";
-		break;
-	case 2:
-		thisproductnaam = "Afrikaans droomkruid";
-		thisgebruik = "eten, drinken";
-		break;
-	case 3:
-		thisproductnaam = "Ayahuasca";
-		thisgebruik = "drinken, roken";
-		break;
-	default:
-		thisproductnaam = "default";
-		thisgebruik = "default";
-		break;
-	
-}*/
 
 $("#productnavigatie > h2").html(thisproductnaam);
 
@@ -204,12 +190,19 @@ $("#back").click(function(e) {
 
 
 $(".stem").click(function(){
-	$(".alert").fadeToggle(500);
+	if (theuser == "" || thepass == "") {
+		$("#notloggedin").fadeToggle(500);
+		
+	} else {
+		$("#submitvote").fadeToggle(500);
+		
+	}
+	
 }
 );
 
 $("#annuleren").click(function(){
-	$(".alert").slideToggle(500);
+	$("#notloggedin").fadeToggle(500);
 }
 );
 

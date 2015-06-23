@@ -25,8 +25,7 @@ ul#results > li {
 	background-position: 96% center;
 	background-size: 14px auto;
 	background-image: url("../img/nextred.png");
-	cursor: pointer;
-	
+	cursor: pointer;	
 }
 
 /*ul#results > li > div.productinfo > .bijeffect, ul#results > li > div.productinfo > .hoofdeffect {

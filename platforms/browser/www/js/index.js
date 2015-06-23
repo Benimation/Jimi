@@ -72,3 +72,6 @@ $.getJSON("http://benimation.nl/jimi/db/gettest.php", function(data) {
 	alert(data);
 	
 }); */
+
+var theuser = "";
+var thepass = "";

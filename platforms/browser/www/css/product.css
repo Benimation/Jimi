@@ -2,7 +2,7 @@
 /* created by Benimation */
 
 .alert{
-	position: fixed;
+  position: fixed;
   width: 100%;
   height: 100%;
   background: rgba(0, 15, 35, 0.9);
@@ -41,6 +41,45 @@ cursor: pointer;
 }
 
 #annuleren{
+	cursor:pointer;
+		font-weight:700;
+	font-size: 18px;
+	  display: inline-block;
+ 	 padding: 10px 0 5px 0;	
+}
+
+#votealert{
+	width: 80%;
+  height: auto;
+  background: #fff;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-weight: 300;
+  margin-top: 50%;
+  /*transform: translate(0, 50%);*/
+  margin-bottom: 15px;
+}
+
+#votealert > h3{
+	  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid #8e979e;
+  text-align: center;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+#voteup{
+cursor: pointer;
+	 font-weight: 700;
+  display: inline-block;
+  float: right;
+  font-size: 18px;
+   padding: 10px 0 5px 0;	
+}
+
+#votedown{
 	cursor:pointer;
 		font-weight:700;
 	font-size: 18px;
@@ -320,5 +359,37 @@ cursor: pointer;
 	color: #B94A48;
 	padding: 10px;
 	margin: 16px 0;
+	
+}
+
+/* Kopen tab */
+#tabs #koop > ul > li {
+	line-height: 75px;
+	font-weight: 300;
+	font-size: 16px;
+	border-bottom: 1px solid #BC003B;
+	color: #404E5C;
+	padding-left: 60px;
+	padding-right: 16px;
+	background-repeat: no-repeat;
+	background-position: 16px center;
+	background-size: 32px auto;
+	/*background-image: url("../img/iconen/empty.png");*/
+	list-style: none;
+}
+
+#tabs #koop ul > li {
+	border-bottom: solid 1px #bc003b;
+	background-repeat: no-repeat;
+	background-position: 96% center;
+	background-size: 14px auto;
+	background-image: url("../img/nextred.png");
+	cursor: pointer;
+}
+
+#tabs #effecten > ul > li.bedrijf {
+	background-image: url("../img/azariusLogo.png");
+	width: 50%;
+	height: 50%;
 	
 }

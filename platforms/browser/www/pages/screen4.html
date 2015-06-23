@@ -9,13 +9,23 @@
 
 <div class="contentcontainer">
 
-      <div class="alert">
+      <div class="alert" id="notloggedin">
             <div id="loginalert">
             <h3>Oeps..</h3>
             Om te kunnen stemmen dien je ingelogd te zijn.<br />
              <span id="annuleren">Annuleren</span><span id="inloggen">Inloggen</span>
             </div>
-        </div>
+            
+      </div>
+      
+      <div class="alert" id="submitvote">
+            <div id="votealert">
+            <h3>Stemmen</h3>
+            Heb je dit effect ervaren?<br />
+             <span id="votedown">Nee</span><span id="voteup">Ja</span>
+            </div>
+            
+      </div>
 
 <div id="foto"></div>
 
@@ -53,8 +63,11 @@
     </div>
     
     <div id="koop" class="tab">
-    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ipsum tempus, scelerisque justo elementum, tincidunt justo. Ut imperdiet sollicitudin lacus, id efficitur dolor scelerisque eget. Phasellus lorem massa, luctus id justo eget, vestibulum cursus ante. Vestibulum quis turpis nulla. Duis id tempor lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam venenatis, diam id tincidunt scelerisque, mauris lorem ultricies ipsum, id ultricies felis tellus id ipsum. Proin quam augue, accumsan ultricies condimentum quis, mattis pellentesque arcu. Integer et nunc velit. Nullam nunc dolor, pulvinar sed est nec, fermentum hendrerit orci. Praesent quis justo tristique, scelerisque nibh in, ultricies felis.</p>
-        
+    	<ul>
+            <li class="bedrijf">
+            	<div class="aza">test</div> 	
+            </li>
+        </ul>        
     </div>
 	
 </div>
@@ -66,30 +79,6 @@
 // gekozen product weergeven
 var thisproductnaam = thisproductdata.name;
 var thisgebruik = thisproductdata.gebruik;
-
-/*switch (gekozenproduct) {
-	case 0:
-		thisproductnaam = "error";
-		thisgebruik = "error";
-		break;
-	case 1:
-		thisproductnaam = "Salvia Divinorum";
-		thisgebruik = "roken";
-		break;
-	case 2:
-		thisproductnaam = "Afrikaans droomkruid";
-		thisgebruik = "eten, drinken";
-		break;
-	case 3:
-		thisproductnaam = "Ayahuasca";
-		thisgebruik = "drinken, roken";
-		break;
-	default:
-		thisproductnaam = "default";
-		thisgebruik = "default";
-		break;
-	
-}*/
 
 $("#productnavigatie > h2").html(thisproductnaam);
 
@@ -201,12 +190,19 @@ $("#back").click(function(e) {
 
 
 $(".stem").click(function(){
-	$(".alert").fadeToggle(500);
+	if (theuser == "" || thepass == "") {
+		$("#notloggedin").fadeToggle(500);
+		
+	} else {
+		$("#submitvote").fadeToggle(500);
+		
+	}
+	
 }
 );
 
 $("#annuleren").click(function(){
-	$(".alert").slideToggle(500);
+	$("#notloggedin").fadeToggle(500);
 }
 );
 
