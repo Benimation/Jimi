@@ -141,3 +141,10 @@ h2{
   z-index: 40;
   position: relative;
 }
+
+#sorry {
+	display: block;
+	text-align: center;
+	margin-top: 144px;
+	
+}

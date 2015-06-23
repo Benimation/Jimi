@@ -56,8 +56,10 @@ function displayProducts() {
 		
 	});
 	
-	if (productdata == []) {
-		$("#results").html("Sorry, niets gevonden.");
+	if (productdata.length == 0) {
+		console.log("hoera");
+		
+		$("#results").html('<span id="sorry">Sorry, niets gevonden.</span>');
 		
 	}
 	
