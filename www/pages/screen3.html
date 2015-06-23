@@ -8,76 +8,20 @@
 <div class="contentcontainer">
 
 
-<ul id="results">
-	<li id="product1">
-    	<img src="img/product/1.jpg" alt="Salvia Divinorum" />
-        <div class="productinfo">
-            <h2>Salvia Divinorum</h2>
-            <div class="hoofdeffect">
-                <h3 class="hoofdh3"></h3>
-               <span class="downvote"><img class="voteimg" src="img/downvote.png"/>1</span> <span class="upvote"><img class="voteimg" src="img/upvote.png"/>10</span>
-                
-            </div>
-            
-            <div class="bijeffect">
-            <h5>Bij effecten</h5>
-                <h4 class="bijh4">Afrodiserend</h4>
-                
-                
-            </div>
-            
-        </div>
-        
-    </li>
-    
-    <li id="product2">
-    <img src="img/product/2.jpg" alt="Salvia Divinorum" />
-    <div class="productinfo">
-    	<h2>Afrikaans droomkruid</h2>
-        <div class="hoofdeffect">
-        	<h3 class="hoofdh3"></h3>
-        	<span class="downvote"><img class="voteimg" src="img/downvote.png"/>2</span><span class="upvote"><img class="voteimg" src="img/upvote.png"/>10</span>
-            
-        </div>
-        
-        <div class="bijeffect">
-        <h5>Bij effecten</h5>
-        	<h4 class="bijh4">Euforisch</h4>
-          
-        </div>
-        
-    </div>
-        
-    </li>
-    
-    <li id="product3">
-    <img src="img/product/3.jpg" alt="Salvia Divinorum" />
-    <div class="productinfo">
-    	<h2>Ayahuasca</h2>
-        <div class="hoofdeffect">
-        	<h3 class="hoofdh3"></h3>
-        	<span class="downvote"><img class="voteimg" src="img/downvote.png"/>3</span><span class="upvote"><img class="voteimg" src="img/upvote.png"/>9</span>
-            
-        </div>
-        
-        <div class="bijeffect">
-        <h5>Bij effecten</h5>
-        	<h4 class="bijh4">Geest leegmaken</h4>
-        	
-        </div>
-        
-    </div>
-        
-    </li>
-
-</ul>
+<ul id="results"></ul>
 </div>
 <script>
+// producten laden
+var productdata;
+var gekozenproduct = 0;
+
 if (gekozencategorie != "") {
-	$(".hoofdeffect > h3").html(gekozencategorie);
+	//$(".hoofdeffect > h3").html(gekozencategorie);
 	
 	$.getJSON("http://benimation.nl/jimi/db/get.php?categorie=" + gekozencategorie, function(data) {
-		console.log(data);
+		productdata = data;
+		
+		displayProducts()
 		
 	});
 	
@@ -85,34 +29,34 @@ if (gekozencategorie != "") {
 	$(".hoofdeffect > h3").html(zoekopdracht);
 	
 	$.getJSON("http://benimation.nl/jimi/db/get.php?search=" + zoekopdracht, function(data) {
-		console.log(data);
+		productdata = data;
+		
+		displayProducts()
 		
 	});
 	
 }
 
-var gekozenproduct = 0;
+function displayProducts() {
+	$.each(productdata, function() {
+		console.log(this.productid);
+		
+		$("#results").append('<li id="product' + this.productid + '"><img src="img/product/' + this.productid + '.jpg" alt="' + this.scientificname + '"/><div class="productinfo"><h2>' + this.name + '</h2><div class="hoofdeffect"><h3 class="hoofdh3">' + this.categorie + '</h3><span class="downvote"><img class="voteimg" src="img/downvote.png" alt="downvote"/>' + this.effecten[0].downvotes + '</span><span class="upvote"><img class="voteimg" src="img/upvote.png" alt="upvote"/>' + this.effecten[0].upvotes + '</span></div><div class="bijeffect"><h5>Bij effect</h5><h4 class="bijh4">' + this.effecten[1].effectnaam + '</h4></div></div></li>');
+		
+		// product kiezen
+		$("#results > li#product" + this.productid).click(function(e) {
+			gekozenproduct = this.productid;
+			
+			loadProductPage();
+			
+		});
+		
+	});
+	
+	
+}
 
-$("#results > li#product1").click(function(e) {
-	gekozenproduct = 1;
-	
-	loadProductPage();
-	
-});
 
-$("#results > li#product2").click(function(e) {
-	gekozenproduct = 2;
-	
-	loadProductPage();
-	
-});
-
-$("#results > li#product3").click(function(e) {
-	gekozenproduct = 3;
-	
-	loadProductPage();
-	
-});
 
 function loadProductPage() {
 	$("#container").css("opacity", "0");
