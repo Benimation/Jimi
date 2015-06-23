@@ -1,6 +1,24 @@
 @charset "UTF-8";
 /* created by Benimation */
 
+.alert{
+	position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000f23;
+  opacity: .95;	
+}
+
+#loginalert{
+	width: 80%;
+  height: auto;
+  background: #fff;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 5px;
+  font-weight: 300;	
+}
+
 #productnavigatie{
 	width: 100%;
 	height: auto;	
@@ -148,6 +166,7 @@
 	margin-top: 27px;
 	font-size: 14px;
 	border-radius: 5px;
+	cursor: pointer;
 }
 
 .score{

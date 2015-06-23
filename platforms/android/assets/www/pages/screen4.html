@@ -9,7 +9,10 @@
 
 <div class="contentcontainer">
 
-
+      <!--  <div class="alert">
+            <div id="loginalert">Om te kunnen stemmen dien je ingelogd te zijn.
+            </div>
+        </div>-->
 
 <div id="foto"></div>
 
@@ -183,6 +186,22 @@ $("#back").click(function(e) {
 	
     setTimeout(function() {
 		$("#container").load("pages/screen3.html", function() {
+			$("#container").css("opacity", "1");
+			$("#container").css("-webkit-filter", "blur(0)");
+			$("#container").css("filter", "blur(0)");
+			
+		});
+	}, 100);
+  
+});
+
+$(".stem").click(function(e) {
+  $("#container").css("opacity", "0");
+  $("#container").css("-webkit-filter", "blur(5px)");
+  $("#container").css("filter", "blur(5px)");
+	
+    setTimeout(function() {
+		$("#container").load("pages/login.html", function() {
 			$("#container").css("opacity", "1");
 			$("#container").css("-webkit-filter", "blur(0)");
 			$("#container").css("filter", "blur(0)");
