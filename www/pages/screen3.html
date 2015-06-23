@@ -13,6 +13,7 @@
 <script>
 // producten laden
 var productdata;
+var thisproductdata;
 var gekozenproduct = 0;
 
 if (gekozencategorie != "") {
@@ -38,20 +39,27 @@ if (gekozencategorie != "") {
 }
 
 function displayProducts() {
-	$.each(productdata, function() {
+	$.each(productdata, function(key, val) {
 		console.log(this.productid);
 		
-		$("#results").append('<li id="product' + this.productid + '"><img src="img/product/' + this.productid + '.jpg" alt="' + this.scientificname + '"/><div class="productinfo"><h2>' + this.name + '</h2><div class="hoofdeffect"><h3 class="hoofdh3">' + this.categorie + '</h3><span class="downvote"><img class="voteimg" src="img/downvote.png" alt="downvote"/>' + this.effecten[0].downvotes + '</span><span class="upvote"><img class="voteimg" src="img/upvote.png" alt="upvote"/>' + this.effecten[0].upvotes + '</span></div><div class="bijeffect"><h5>Bij effect</h5><h4 class="bijh4">' + this.effecten[1].effectnaam + '</h4></div></div></li>');
+		$("#results").append('<li id="product' + this.productid + '" data-index-number="' + key + '"><img src="img/product/' + this.productid + '.jpg" alt="' + this.scientificname + '"/><div class="productinfo"><h2>' + this.name + '</h2><div class="hoofdeffect"><h3 class="hoofdh3">' + this.categorie + '</h3><span class="downvote"><img class="voteimg" src="img/downvote.png" alt="downvote"/>' + this.effecten[0].downvotes + '</span><span class="upvote"><img class="voteimg" src="img/upvote.png" alt="upvote"/>' + this.effecten[0].upvotes + '</span></div><div class="bijeffect"><h5>Bij effect</h5><h4 class="bijh4">' + this.effecten[1].effectnaam + '</h4></div></div></li>');
 		
 		// product kiezen
 		$("#results > li#product" + this.productid).click(function(e) {
-			gekozenproduct = this.productid;
+			gekozenproduct = parseInt($(this).attr("id").slice(7));
+			
+			thisproductdata = productdata[parseInt($(this).attr("data-index-number"))];
 			
 			loadProductPage();
 			
 		});
 		
 	});
+	
+	if (productdata == []) {
+		$("#results").html("Sorry, niets gevonden.");
+		
+	}
 	
 	
 }

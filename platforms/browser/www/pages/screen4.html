@@ -64,10 +64,10 @@
 
 <script>
 // gekozen product weergeven
-var thisproductnaam = "";
-var thisgebruik = "";
+var thisproductnaam = thisproductdata.naam;
+var thisgebruik = thisproductdata.gebruik;
 
-switch (gekozenproduct) {
+/*switch (gekozenproduct) {
 	case 0:
 		thisproductnaam = "error";
 		thisgebruik = "error";
@@ -89,7 +89,7 @@ switch (gekozenproduct) {
 		thisgebruik = "default";
 		break;
 	
-}
+}*/
 
 $("#productnavigatie > h2").html(thisproductnaam);
 
