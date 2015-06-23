@@ -55,16 +55,17 @@ hr{
 	width: 90%;
 	text-align: center;
 	color: #fff;
-	background-image: url("../img/button.png");
-		background-size: cover;	
+	background-image: url("../img/button.png")!important;
+	background-size: cover!important;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 15px 0px;
 	font-size: 18px;
-  	font-weight: 300;
-  	margin-top: 10px;
+	font-weight: 300;
+	margin-top: 10px;
 	cursor: pointer;
-  	border-bottom: 4px solid #9b0013
+	border-bottom: 4px solid #9b0013;
+	
 }
 
 #loginform #button {
@@ -72,7 +73,7 @@ hr{
 	
 }
 
-#registreer{
+#registreer, #terug {
 	text-align: center;
   	color: #fff;
 	font-weight: 300;
@@ -82,4 +83,11 @@ hr{
 
 #bold{
 	font-weight: 700;	
+}
+
+#registerform {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	
 }

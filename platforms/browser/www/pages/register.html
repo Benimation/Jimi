@@ -2,14 +2,15 @@
 	
     <div id="logoLogin"></div>
     
-    <form id="loginform" onSubmit="login(); return false;">
+    <form id="registerform" onSubmit="register(); return false;">
     <input id="user" type="text" name="naam" placeholder="Inlognaam" />
     <hr />
     <input id="pass" type="password" name="wachtwoord" placeholder="Wachtwoord" />
+    <input id="pass2" type="password" name="wachtwoord2" placeholder="Wachtwoord herhalen" />
     
-    <input type="submit" id="button" value="Inloggen" />
-	
-	<p id="registreer">Nog geen account? <span id="bold">Registreer hier!</span></p>
+    <input type="submit" id="button" value="Registreer" />
+    
+    <p id="terug">Ga terug</span></p>
     </form>
 </div>
 
@@ -18,11 +19,11 @@
 var theuser;
 var thepass;
 
-function login() {
+function register() {
 	theuser = $("#user").val();
 	thepass = $("#pass").val();
 	
-	$.getJSON("http://benimation.nl/jimi/db/login.php?user=" + theuser + "&pass=" + thepass, function(data) {
+	$.getJSON("http://benimation.nl/jimi/db/register.php?user=" + theuser + "&pass=" + thepass, function(data) {
 		if (data[0]) {
 			loadApp();
 			
@@ -30,24 +31,24 @@ function login() {
 			theuser = null;
 			thepass = null;
 			
-			alert("Inlognaam/wachtwoord verkeerd!");
+			alert("Deze naam is al in gebruik!");
 			
 		}
 		
 	});
-	
+    
 }
 
-$("#registreer > #bold").click(function(e) {
+$("#terug").click(function(e) {
 	$("#container").css("opacity", "0");
 	
     setTimeout(function() {
-		$("#container").load("pages/register.html", function() {
+		$("#container").load("pages/login.html", function() {
 			$("#container").css("opacity", "1");
 			
 		});
 	}, 100);
-	
+  
 });
 
 function loadApp() {

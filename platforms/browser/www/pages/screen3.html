@@ -17,7 +17,7 @@ var thisproductdata;
 var gekozenproduct = 0;
 
 if (gekozencategorie != "") {
-	//$(".hoofdeffect > h3").html(gekozencategorie);
+	$(".titlebanner").html(gekozencategorie);
 	
 	$.getJSON("http://benimation.nl/jimi/db/get.php?categorie=" + gekozencategorie, function(data) {
 		productdata = data;

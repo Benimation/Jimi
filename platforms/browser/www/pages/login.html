@@ -3,15 +3,13 @@
     <div id="logoLogin"></div>
     
     <form id="loginform" onSubmit="login(); return false;">
-    <input id="user" type="text" name="naam" placeholder="Inlognaam">
+    <input id="user" type="text" name="naam" placeholder="Inlognaam" />
     <hr />
-    <input id="pass" type="password" name="wachtwoord" placeholder="Wachtwoord">
+    <input id="pass" type="password" name="wachtwoord" placeholder="Wachtwoord" />
     
-    <input type="submit" id="button" value="Inloggen">
+    <input type="submit" id="button" value="Inloggen" />
 	
 	<p id="registreer">Nog geen account? <span id="bold">Registreer hier!</span></p>
-    
-    <div id="button" class="verder"> Verder zonder in te loggen </div>
     </form>
 </div>
 
@@ -29,6 +27,9 @@ function login() {
 			loadApp();
 			
 		} else {
+			theuser = null;
+			thepass = null;
+			
 			alert("Inlognaam/wachtwoord verkeerd!");
 			
 		}
@@ -36,6 +37,18 @@ function login() {
 	});
 	
 }
+
+$("#registreer > #bold").click(function(e) {
+	$("#container").css("opacity", "0");
+	
+    setTimeout(function() {
+		$("#container").load("pages/register.html", function() {
+			$("#container").css("opacity", "1");
+			
+		});
+	}, 100);
+	
+});
 
 function loadApp() {
 	$("#container").css("opacity", "0");
