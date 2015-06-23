@@ -6,7 +6,11 @@
 </div>
 <div class="contentcontainer">
 
-	<input class="zoekbalk" type="text" name="zoeken" placeholder="Raak aan om te zoeken" />
+	<form onsubmit="zoek(); return false;">
+    <input id="zoekbalk" type="text" name="zoeken" placeholder="Raak aan om te zoeken" />
+    <input id="zoekknop" type="submit" value="" />
+    
+    </form>
 
 
 <!-- Op middel, symptoom, effect of inname -->
@@ -26,15 +30,15 @@
 var gekozencategorie = "";
 var zoekopdracht = "";
 
-/*$(".zoekbalk").click(function(e) {
-	zoekopdracht = prompt("Vul je zoekopdracht in");
+function zoek() {
+	zoekopdracht = $("#zoekbalk").val();
 	
 	if (zoekopdracht != "") {
 		loadResultPage();
 		
-	}
+	} 
     
-});*/
+}
 
 $("#categories > li.droom").click(function(e) {
 	gekozencategorie = "Droomopwekkend";

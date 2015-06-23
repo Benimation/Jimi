@@ -112,7 +112,7 @@ h2{
 	
 }
 
-.zoekbalk{
+#zoekbalk{
 	  width: 100%;
   text-align: center;
   background-color: #e3e3e3;
@@ -129,3 +129,15 @@ h2{
 
 
 #container > div.contentcontainer > input:focus{outline:none;}
+
+#zoekknop{
+   -webkit-appearance: none;
+  background: none;
+  height: 35px;
+  width: 50px;
+  border: hidden;
+  float: right;
+  margin-top: -35px;
+  z-index: 40;
+  position: relative;
+}
