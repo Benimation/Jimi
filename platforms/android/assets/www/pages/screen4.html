@@ -9,10 +9,13 @@
 
 <div class="contentcontainer">
 
-      <!--  <div class="alert">
-            <div id="loginalert">Om te kunnen stemmen dien je ingelogd te zijn.
+      <div class="alert">
+            <div id="loginalert">
+            <h3>Oeps..</h3>
+            Om te kunnen stemmen dien je ingelogd te zijn.<br />
+             <span id="annuleren">Annuleren</span><span id="inloggen">Inloggen</span>
             </div>
-        </div>-->
+        </div>
 
 <div id="foto"></div>
 
@@ -195,20 +198,27 @@ $("#back").click(function(e) {
   
 });
 
-$(".stem").click(function(e) {
+
+$(".stem").click(function(){
+	$(".alert").fadeToggle(500);
+}
+);
+
+$("#annuleren").click(function(){
+	$(".alert").slideToggle(500);
+}
+);
+
+$("#inloggen").click(function(e) {
   $("#container").css("opacity", "0");
-  $("#container").css("-webkit-filter", "blur(5px)");
-  $("#container").css("filter", "blur(5px)");
+
 	
     setTimeout(function() {
 		$("#container").load("pages/login.html", function() {
 			$("#container").css("opacity", "1");
-			$("#container").css("-webkit-filter", "blur(0)");
-			$("#container").css("filter", "blur(0)");
 			
 		});
 	}, 100);
   
 });
-
 </script>

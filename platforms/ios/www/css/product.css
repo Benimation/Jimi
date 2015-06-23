@@ -5,8 +5,8 @@
 	position: fixed;
   width: 100%;
   height: 100%;
-  background: #000f23;
-  opacity: .95;	
+  background: rgba(0, 15, 35, 0.9);
+  display: none;
 }
 
 #loginalert{
@@ -16,7 +16,34 @@
   padding: 10px;
   margin: 0 auto;
   border-radius: 5px;
-  font-weight: 300;	
+  font-weight: 300;
+  margin-top: 50%;
+  transform: translate(0, 50%);
+    border-bottom: 1px solid;
+}
+
+#loginalert > h3{
+	display: inline-block;
+  width: 100%;
+
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#inloggen{
+
+	 font-weight: 700;
+  display: inline-block;
+  float: right;
+  font-size: 18px;
+   padding: 10px 0 5px 0;	
+}
+
+#annuleren{
+		font-weight:700;
+	font-size: 18px;
+	  display: inline-block;
+ 	 padding: 10px 0 5px 0;	
 }
 
 #productnavigatie{
