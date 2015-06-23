@@ -120,4 +120,10 @@ h2{
   background-position: 96% center, 4%;
   background-size: 23px auto, 32px auto;
   font-weight: 300;
+  border: none;
+  font-size: 14px;
+  font-weight: 300;
 }
+
+
+#container > div.contentcontainer > input:focus{outline:none;}

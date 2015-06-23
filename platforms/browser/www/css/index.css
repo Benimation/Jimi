@@ -207,3 +207,10 @@ body{
 	margin: 11px;
 	cursor: pointer;
 }
+
+#menu{
+	position: fixed;
+	z-index: 50;
+	font-size: 100px;
+	display: none;	
+}

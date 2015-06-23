@@ -199,11 +199,18 @@ body{
 	width: 29px;
 	position: absolute;
 	top: 24px;
-	background-image: url("../img/info.png");
+	background-image: url("../img/menu.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 63px;
 	right: 0px;
 	margin: 11px;
 	cursor: pointer;
+}
+
+#menu{
+	position: fixed;
+	z-index: 50;
+	font-size: 100px;
+	display: none;	
 }

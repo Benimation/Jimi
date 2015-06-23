@@ -6,7 +6,10 @@
 </div>
 <div class="contentcontainer">
 
-<div class="zoekbalk">Raak aan om te zoeken</div>
+	<input class="zoekbalk" type="text" name="zoeken" placeholder="Raak aan om te zoeken" />
+
+
+<!-- Op middel, symptoom, effect of inname -->
 
 <ul id="categories">
 	<li class="droom">Droomopwekkend</li>
@@ -23,7 +26,7 @@
 var gekozencategorie = "";
 var zoekopdracht = "";
 
-$(".zoekbalk").click(function(e) {
+/*$(".zoekbalk").click(function(e) {
 	zoekopdracht = prompt("Vul je zoekopdracht in");
 	
 	if (zoekopdracht != "") {
@@ -31,7 +34,7 @@ $(".zoekbalk").click(function(e) {
 		
 	}
     
-});
+});*/
 
 $("#categories > li.droom").click(function(e) {
 	gekozencategorie = "Droomopwekkend";

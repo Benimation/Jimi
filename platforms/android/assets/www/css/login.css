@@ -50,21 +50,6 @@ hr{
 	border-color: #fff;	
 }
 
-::-webkit-input-placeholder {
-   color: #fff;
-}
-
-:-moz-placeholder { /* Firefox 18- */
-   color: #fff;  
-}
-
-::-moz-placeholder {  /* Firefox 19+ */
-   color: #fff;  
-}
-
-:-ms-input-placeholder {  
-   color: #fff;  
-}
 
 #button{
 	width: 90%;
