@@ -21,6 +21,8 @@ function login() {
 	
 	$.getJSON("http://benimation.nl/jimi/db/login.php?user=" + theuser + "&pass=" + thepass, function(data) {
 		if (data[0]) {
+			theuserid = data[1];
+			
 			loadApp();
 			
 		} else {

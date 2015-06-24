@@ -69,6 +69,9 @@
 <script>
 window.scrollTo(0, 0);
 
+// update votes
+voteupdater = setInterval(reloadProductData, 2000);
+
 // gekozen product weergeven
 var thisproductnaam = thisproductdata.name;
 var thisgebruik = thisproductdata.gebruik;
@@ -128,53 +131,85 @@ $("#tabmenu > li#gebruik").click(function(e) {
 $("#tabs > #gebruik > p").html(thisgebruik);
 $("#tabs > #beschrijving > p").html(thisproductdata.beschrijving + '<p class="warning">' + thisproductdata.waarschuwing + "</p>");
 
-$.each(thisproductdata.effecten, function() {
-	var caticon = "default";
-	switch (this.effectnaam) {
-		case "Droomopwekkend":
-			caticon = "droom";
-			break;
-		case "Geestverruimend":
-			caticon = "geest";
-			break;
-		case "Hallucineren":
-			caticon = "hallu";
-			break;
-		case "Concentratie":
-			caticon = "concen";
-			break;
-		case "Energie":
-			caticon = "ener";
-			break;
-		case "Lustopwekkend":
-			caticon = "lust";
-			break;
-		case "Pijnverlichtend":
-			caticon = "pijn";
-			break;
-		case "Ontspanning":
-			caticon = "ontspan";
-			break;
-		
-	}
-	
-	$("#tabs > #effecten > ul").append('<li class="' + caticon + '" id="effect' + this.effectid + '"><span>' + this.effectnaam + '</span><div class="stem">Stem</div><div class="score"><div class="upvoteproduct"><img class="voteimg" src="img/upvote.png"/>' + this.upvotes + '</div><div class="downvoteproduct"><img class="voteimg" src="img/downvote.png"/>' + this.downvotes + '</div></div></li>');
-	
-	$("li#effect" + this.effectid +" > div.stem").click(function(){
-		var govote = $(this).parent().attr("id");
-		console.log(govote);
-		
-		if (theuser == "" || thepass == "") {
-			$("#notloggedin").fadeToggle(500);
+var govote;
+
+function loadEffectsList() {
+	$.each(thisproductdata.effecten, function() {
+		var caticon = "default";
+		switch (this.effectnaam) {
+			case "Droomopwekkend":
+				caticon = "droom";
+				break;
+			case "Geestverruimend":
+				caticon = "geest";
+				break;
+			case "Hallucineren":
+				caticon = "hallu";
+				break;
+			case "Concentratie":
+				caticon = "concen";
+				break;
+			case "Energie":
+				caticon = "ener";
+				break;
+			case "Lustopwekkend":
+				caticon = "lust";
+				break;
+			case "Pijnverlichtend":
+				caticon = "pijn";
+				break;
+			case "Ontspanning":
+				caticon = "ontspan";
+				break;
 			
-		} else {
-			$("#submitvote").fadeToggle(500);
+		}
 		
-	}
+		$("#tabs > #effecten > ul").append('<li class="' + caticon + '" id="effect' + this.effectid + '"><span>' + this.effectnaam + '</span><div class="stem">Stem</div><div class="score"><div class="upvoteproduct"><img class="voteimg" src="img/upvote.png"/>' + this.upvotes + '</div><div class="downvoteproduct"><img class="voteimg" src="img/downvote.png"/>' + this.downvotes + '</div></div></li>');
+		
+		$("li#effect" + this.effectid +" > div.stem").click(function(){
+			govote = $(this).parent().attr("id").slice(6);
+			
+			if (theuser == "" || thepass == "") {
+				$("#notloggedin").fadeToggle(500);
+				
+			} else {
+				$("#submitvote").fadeToggle(500);
+				
+			}
+			
+		});
+		
+	});
 	
 }
-);
+
+loadEffectsList();
+
+function reloadProductData() {
+	loadProductData();
 	
+	thisproductdata = productdata[thisproductdatakey];
+	
+	$("#tabs > #effecten > ul").empty();
+	
+	loadEffectsList();
+	
+}
+
+$("#submitvote #voteup").click(function(e) {
+	$.getJSON("http://benimation.nl/jimi/db/vote.php?userid=" + theuserid + "&pass=" + thepass + "&effectid=" + govote + "&updown=1", function(data) {
+		$("#submitvote").fadeToggle(500);
+		
+	});
+    
+});
+
+$("#submitvote #votedown").click(function(e) {
+	$.getJSON("http://benimation.nl/jimi/db/vote.php?userid=" + theuserid + "&pass=" + thepass + "&effectid=" + govote + "&updown=0", function(data) {
+		$("#submitvote").fadeToggle(500);
+		
+	});
+    
 });
 
 // kopen
