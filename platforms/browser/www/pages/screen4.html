@@ -40,16 +40,7 @@
 
 <div id="tabs">
 	<div id="effecten" class="tab">
-    	<ul>
-            <li class="droom"><span>Droomopwekkend</span><div class="stem">Stem</div>
-            <div class="score"><div class="upvoteproduct"><img class="voteimg" src="img/upvote.png"/>10</div><div class="downvoteproduct"><img class="voteimg" src="img/downvote.png"/>1</div></div></li>
-            
-            <li class="geest"><span>Geestverruimend</span><div class="stem">Stem</div>
-            <div class="score"><div class="upvoteproduct"><img class="voteimg" src="img/upvote.png"/>10</div><div class="downvoteproduct"><img class="voteimg" src="img/downvote.png"/>1</div></div></li>
-            
-            <li class="hallu"><span>Hallucinerend</span><div class="stem">Stem</div>
-            <div class="score"><div class="upvoteproduct"><img class="voteimg" src="img/upvote.png"/>10</div><div class="downvoteproduct"><img class="voteimg" src="img/downvote.png"/>1</div></div></li>
-        </ul>
+    	<ul></ul>
     </div>
     
     <div id="beschrijving" class="tab">
@@ -132,8 +123,44 @@ $("#tabmenu > li#gebruik").click(function(e) {
 	$("#tabs > div#koop").css("display", "none");
     
 });
+
+// inladen
 $("#tabs > #gebruik > p").html(thisgebruik);
 $("#tabs > #beschrijving > p").html(thisproductdata.beschrijving + '<p class="warning">' + thisproductdata.waarschuwing + "</p>");
+
+$.each(thisproductdata.effecten, function() {
+	var caticon = "concen";
+	switch (this.effectnaam) {
+		case "Droomopwekkend":
+			caticon = "droom";
+			break;
+		case "Geestverruimend":
+			caticon = "geest";
+			break;
+		case "Hallucineren":
+			caticon = "hallu";
+			break;
+		case "Concentratie":
+			caticon = "concen";
+			break;
+		case "Energie":
+			caticon = "ener";
+			break;
+		case "Lustopwekkend":
+			caticon = "lust";
+			break;
+		case "Pijnverlichtend":
+			caticon = "pijn";
+			break;
+		case "Ontspanning":
+			caticon = "ontspan";
+			break;
+		
+	}
+	
+	$("#tabs > #effecten > ul").append('<li class="' + caticon + '" id="effect' + this.effectid + '"><span>' + this.effectnaam + '</span><div class="stem">Stem</div><div class="score"><div class="upvoteproduct"><img class="voteimg" src="img/upvote.png"/>' + this.upvotes + '</div><div class="downvoteproduct"><img class="voteimg" src="img/downvote.png"/>' + this.downvotes + '</div></div></li>');
+	
+});
 
 // kopen
 $("#tabmenu > li#koop").click(function(e) {
