@@ -25,7 +25,7 @@ function loadProductData() {
 		$.getJSON("http://benimation.nl/jimi/db/get.php?categorie=" + gekozencategorie, function(data) {
 			productdata = data;
 			
-			displayProducts()
+			displayProducts();
 			
 		});
 		
@@ -35,7 +35,7 @@ function loadProductData() {
 		$.getJSON("http://benimation.nl/jimi/db/get.php?search=" + zoekopdracht, function(data) {
 			productdata = data;
 			
-			displayProducts()
+			displayProducts();
 			
 		});
 		
@@ -48,6 +48,8 @@ loadProductData();
 var thisproductdatakey;
 
 function displayProducts() {
+	$("#results").empty();
+	
 	$.each(productdata, function(key, val) {
 		var bijeffecten;
 		
