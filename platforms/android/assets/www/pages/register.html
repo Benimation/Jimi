@@ -26,6 +26,8 @@ function register() {
 	
 	$.getJSON("http://benimation.nl/jimi/db/register.php?user=" + theuser + "&pass=" + thepass, function(data) {
 		if (data[0]) {
+			theuserid = data[1];
+			
 			loadApp();
 			
 		} else {

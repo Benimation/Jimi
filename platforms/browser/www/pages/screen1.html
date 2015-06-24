@@ -21,14 +21,10 @@ window.scrollTo(0, 0);
 
 $("#kruisje").click(function(e) {
 	$("#container").css("opacity", "0");
-	$("#container").css("-webkit-filter", "blur(5px)");
-	$("#container").css("filter", "blur(5px)");
 	
     setTimeout(function() {
 		$("#container").load("pages/screen2.html", function() {
 			$("#container").css("opacity", "1");
-			$("#container").css("-webkit-filter", "blur(0)");
-			$("#container").css("filter", "blur(0)");
 			
 		});
 	}, 100);

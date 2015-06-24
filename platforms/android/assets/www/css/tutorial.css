@@ -1,3 +1,5 @@
+
+
 @charset "UTF-8";
 /* CSS Document */
 
@@ -35,7 +37,7 @@
 	line-height: 25px;
 	font-weight: 300;
 	padding: 0 15%;
-	text-align:justify;
+	/*text-align:justify;*/
 	
 }
 

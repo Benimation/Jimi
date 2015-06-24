@@ -230,14 +230,10 @@ $("#tabmenu > li#koop").click(function(e) {
 
 $(".testimg").click(function(e) {
 	$("#container").css("opacity", "0");
-	$("#container").css("-webkit-filter", "blur(5px)");
-	$("#container").css("filter", "blur(5px)");
 	
 	setTimeout(function() {
 		$("#container").load("pages/screen1.html", function() {
 			$("#container").css("opacity", "1");
-			$("#container").css("-webkit-filter", "blur(0)");
-			$("#container").css("filter", "blur(0)");
 			
 		});
 	}, 100);
@@ -253,14 +249,10 @@ $(window).resize(function(e) {
 
 $("#back").click(function(e) {
   $("#container").css("opacity", "0");
-  $("#container").css("-webkit-filter", "blur(5px)");
-  $("#container").css("filter", "blur(5px)");
 	
     setTimeout(function() {
 		$("#container").load("pages/screen3.html", function() {
 			$("#container").css("opacity", "1");
-			$("#container").css("-webkit-filter", "blur(0)");
-			$("#container").css("filter", "blur(0)");
 			
 		});
 	}, 100);
