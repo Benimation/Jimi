@@ -9,13 +9,23 @@
 
 <div class="contentcontainer">
 
-      <div class="alert">
+      <div class="alert" id="notloggedin">
             <div id="loginalert">
             <h3>Oeps..</h3>
             Om te kunnen stemmen dien je ingelogd te zijn.<br />
              <span id="annuleren">Annuleren</span><span id="inloggen">Inloggen</span>
             </div>
-        </div>
+            
+      </div>
+      
+      <div class="alert" id="submitvote">
+            <div id="votealert">
+            <h3>Stemmen</h3>
+            Heb je dit effect ervaren?<br />
+             <span id="votedown">Nee</span><span id="voteup">Ja</span>
+            </div>
+            
+      </div>
 
 <div id="foto"></div>
 
@@ -25,7 +35,7 @@
 	<li id="effecten">Effecten</li>
     <li id="beschrijving">Beschrijving</li>
     <li id="gebruik">Gebruik</li>
-    <li id="waarschuwing">Waarschuwing</li>
+    <li id="koop">Kopen</li>
 </ul>
 
 <div id="tabs">
@@ -52,9 +62,12 @@
         
     </div>
     
-    <div id="waarschuwing" class="tab">
-    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a ipsum tempus, scelerisque justo elementum, tincidunt justo. Ut imperdiet sollicitudin lacus, id efficitur dolor scelerisque eget. Phasellus lorem massa, luctus id justo eget, vestibulum cursus ante. Vestibulum quis turpis nulla. Duis id tempor lacus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam venenatis, diam id tincidunt scelerisque, mauris lorem ultricies ipsum, id ultricies felis tellus id ipsum. Proin quam augue, accumsan ultricies condimentum quis, mattis pellentesque arcu. Integer et nunc velit. Nullam nunc dolor, pulvinar sed est nec, fermentum hendrerit orci. Praesent quis justo tristique, scelerisque nibh in, ultricies felis.</p>
-        
+    <div id="koop" class="tab">
+    	<ul>
+            <li class="bedrijf">
+            	<div class="aza">test</div> 	
+            </li>
+        </ul>        
     </div>
 	
 </div>
@@ -64,36 +77,12 @@
 
 <script>
 // gekozen product weergeven
-var thisproductnaam = thisproductdata.naam;
+var thisproductnaam = thisproductdata.name;
 var thisgebruik = thisproductdata.gebruik;
-
-/*switch (gekozenproduct) {
-	case 0:
-		thisproductnaam = "error";
-		thisgebruik = "error";
-		break;
-	case 1:
-		thisproductnaam = "Salvia Divinorum";
-		thisgebruik = "roken";
-		break;
-	case 2:
-		thisproductnaam = "Afrikaans droomkruid";
-		thisgebruik = "eten, drinken";
-		break;
-	case 3:
-		thisproductnaam = "Ayahuasca";
-		thisgebruik = "drinken, roken";
-		break;
-	default:
-		thisproductnaam = "default";
-		thisgebruik = "default";
-		break;
-	
-}*/
 
 $("#productnavigatie > h2").html(thisproductnaam);
 
-$("#foto").css("background-image", 'url("img/product/' + gekozenproduct + 'groot.jpg")');
+$("#foto").css("background-image", 'url("img/product/' + gekozenproduct + '.jpg")');
 
 
 // tabs
@@ -105,12 +94,12 @@ $("#tabmenu > li#effecten").click(function(e) {
 	$(this).addClass("activetab");
 	$("#tabmenu > li#beschrijving").removeClass("activetab");
 	$("#tabmenu > li#gebruik").removeClass("activetab");
-	$("#tabmenu > li#waarschuwing").removeClass("activetab");
+	$("#tabmenu > li#koop").removeClass("activetab");
 	
 	$("#tabs > div#effecten").css("display", "block");
 	$("#tabs > div#beschrijving").css("display", "none");
 	$("#tabs > div#gebruik").css("display", "none");
-	$("#tabs > div#waarschuwing").css("display", "none");
+	$("#tabs > div#koop").css("display", "none");
     
 });
 
@@ -119,12 +108,12 @@ $("#tabmenu > li#beschrijving").click(function(e) {
 	$(this).addClass("activetab");
 	$("#tabmenu > li#effecten").removeClass("activetab");
 	$("#tabmenu > li#gebruik").removeClass("activetab");
-	$("#tabmenu > li#waarschuwing").removeClass("activetab");
+	$("#tabmenu > li#koop").removeClass("activetab");
 	
 	$("#tabs > div#effecten").css("display", "none");
 	$("#tabs > div#beschrijving").css("display", "block");
 	$("#tabs > div#gebruik").css("display", "none");
-	$("#tabs > div#waarschuwing").css("display", "none");
+	$("#tabs > div#koop").css("display", "none");
     
 });
 
@@ -133,18 +122,19 @@ $("#tabmenu > li#gebruik").click(function(e) {
 	$(this).addClass("activetab");
 	$("#tabmenu > li#beschrijving").removeClass("activetab");
 	$("#tabmenu > li#effecten").removeClass("activetab");
-	$("#tabmenu > li#waarschuwing").removeClass("activetab");
+	$("#tabmenu > li#koop").removeClass("activetab");
 	
 	$("#tabs > div#effecten").css("display", "none");
 	$("#tabs > div#beschrijving").css("display", "none");
 	$("#tabs > div#gebruik").css("display", "block");
-	$("#tabs > div#waarschuwing").css("display", "none");
+	$("#tabs > div#koop").css("display", "none");
     
 });
 $("#tabs > #gebruik > p").html(thisgebruik);
+$("#tabs > #beschrijving > p").html(thisproductdata.beschrijving + '<p class="warning">' + thisproductdata.waarschuwing + "</p>");
 
-// waarschuwing
-$("#tabmenu > li#waarschuwing").click(function(e) {
+// kopen
+$("#tabmenu > li#koop").click(function(e) {
 	$(this).addClass("activetab");
 	$("#tabmenu > li#beschrijving").removeClass("activetab");
 	$("#tabmenu > li#gebruik").removeClass("activetab");
@@ -153,7 +143,7 @@ $("#tabmenu > li#waarschuwing").click(function(e) {
 	$("#tabs > div#effecten").css("display", "none");
 	$("#tabs > div#beschrijving").css("display", "none");
 	$("#tabs > div#gebruik").css("display", "none");
-	$("#tabs > div#waarschuwing").css("display", "block");
+	$("#tabs > div#koop").css("display", "block");
     
 });
 
@@ -200,12 +190,19 @@ $("#back").click(function(e) {
 
 
 $(".stem").click(function(){
-	$(".alert").fadeToggle(500);
+	if (theuser == "" || thepass == "") {
+		$("#notloggedin").fadeToggle(500);
+		
+	} else {
+		$("#submitvote").fadeToggle(500);
+		
+	}
+	
 }
 );
 
 $("#annuleren").click(function(){
-	$(".alert").slideToggle(500);
+	$("#notloggedin").fadeToggle(500);
 }
 );
 

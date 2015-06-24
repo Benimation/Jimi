@@ -2,22 +2,52 @@
 	
     <div id="logoLogin"></div>
     
-    <form id="loginform">
-    <input type="text" name="naam" placeholder="Inlognaam">
+    <form id="loginform" onSubmit="login(); return false;">
+    <input id="user" type="text" name="naam" placeholder="Inlognaam" />
     <hr />
-    <input type="password" name="wachtwoord" placeholder="Wachtwoord">
+    <input id="pass" type="password" name="wachtwoord" placeholder="Wachtwoord" />
     
-    <div id="button"> Inloggen </div>
+    <input type="submit" id="button" value="Inloggen" />
 	
 	<p id="registreer">Nog geen account? <span id="bold">Registreer hier!</span></p>
-    
-    <div id="button" class="verder"> Verder zonder in te loggen </div>
     </form>
 </div>
 
 
 <script>
-$("#button").click(function(e) {
+function login() {
+	theuser = $("#user").val();
+	thepass = $("#pass").val();
+	
+	$.getJSON("http://benimation.nl/jimi/db/login.php?user=" + theuser + "&pass=" + thepass, function(data) {
+		if (data[0]) {
+			loadApp();
+			
+		} else {
+			theuser = "";
+			thepass = "";
+			
+			alert("Inlognaam/wachtwoord verkeerd!");
+			
+		}
+		
+	});
+	
+}
+
+$("#registreer > #bold").click(function(e) {
+	$("#container").css("opacity", "0");
+	
+    setTimeout(function() {
+		$("#container").load("pages/register.html", function() {
+			$("#container").css("opacity", "1");
+			
+		});
+	}, 100);
+	
+});
+
+function loadApp() {
 	$("#container").css("opacity", "0");
 	
     setTimeout(function() {
@@ -27,7 +57,7 @@ $("#button").click(function(e) {
 		});
 	}, 100);
 	
-});
+}
 
 
 
