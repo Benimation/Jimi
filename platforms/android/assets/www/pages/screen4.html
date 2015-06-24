@@ -160,6 +160,21 @@ $.each(thisproductdata.effecten, function() {
 	
 	$("#tabs > #effecten > ul").append('<li class="' + caticon + '" id="effect' + this.effectid + '"><span>' + this.effectnaam + '</span><div class="stem">Stem</div><div class="score"><div class="upvoteproduct"><img class="voteimg" src="img/upvote.png"/>' + this.upvotes + '</div><div class="downvoteproduct"><img class="voteimg" src="img/downvote.png"/>' + this.downvotes + '</div></div></li>');
 	
+	$("li#effect" + this.effectid +" > div.stem").click(function(){
+		var govote = $(this).parent().attr("id");
+		console.log(govote);
+		
+		if (theuser == "" || thepass == "") {
+			$("#notloggedin").fadeToggle(500);
+			
+		} else {
+			$("#submitvote").fadeToggle(500);
+		
+	}
+	
+}
+);
+	
 });
 
 // kopen
@@ -216,19 +231,6 @@ $("#back").click(function(e) {
 	}, 100);
   
 });
-
-
-$(".stem").click(function(){
-	if (theuser == "" || thepass == "") {
-		$("#notloggedin").fadeToggle(500);
-		
-	} else {
-		$("#submitvote").fadeToggle(500);
-		
-	}
-	
-}
-);
 
 $("#annuleren").click(function(){
 	$("#notloggedin").fadeToggle(500);

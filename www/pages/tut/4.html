@@ -5,3 +5,18 @@ Je bent nu klaar om Jimi te gaan gebruiken. Wij van Jimi wensen je dan ook veel 
 
 </p>
 <span class="regist">Registreren</span>
+<script>
+
+$(".regist").click(function(e) {
+	$("#container").css("opacity", "0");
+	
+    setTimeout(function() {
+		$("#container").load("pages/register.html", function() {
+			$("#container").css("opacity", "1");
+			
+		});
+	}, 100);
+  
+});
+
+</script>
