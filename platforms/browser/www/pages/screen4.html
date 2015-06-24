@@ -129,7 +129,7 @@ $("#tabs > #gebruik > p").html(thisgebruik);
 $("#tabs > #beschrijving > p").html(thisproductdata.beschrijving + '<p class="warning">' + thisproductdata.waarschuwing + "</p>");
 
 $.each(thisproductdata.effecten, function() {
-	var caticon = "concen";
+	var caticon = "default";
 	switch (this.effectnaam) {
 		case "Droomopwekkend":
 			caticon = "droom";

@@ -253,6 +253,11 @@ cursor: pointer;
 .downvoteproduct{
 }
 
+#tabs #effecten > ul > li.default {
+	background-image: url("../img/iconen/default.png");
+	
+}
+
 #tabs #effecten > ul > li.droom {
 	background-image: url("../img/iconen/droomopwekkend.png");
 	
