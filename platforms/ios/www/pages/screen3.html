@@ -11,6 +11,8 @@
 <ul id="results"></ul>
 </div>
 <script>
+window.scrollTo(0, 0);
+
 // producten laden
 var productdata;
 var thisproductdata;
@@ -27,7 +29,7 @@ if (gekozencategorie != "") {
 	});
 	
 } else if (zoekopdracht != "") {
-	$(".hoofdeffect > h3").html(zoekopdracht);
+	$(".titlebanner").html("Gezocht op: " + zoekopdracht);
 	
 	$.getJSON("http://benimation.nl/jimi/db/get.php?search=" + zoekopdracht, function(data) {
 		productdata = data;
@@ -40,9 +42,17 @@ if (gekozencategorie != "") {
 
 function displayProducts() {
 	$.each(productdata, function(key, val) {
-		console.log(this.productid);
+		var bijeffecten;
 		
-		$("#results").append('<li id="product' + this.productid + '" data-index-number="' + key + '"><img src="img/product/' + this.productid + '.jpg" alt="' + this.scientificname + '"/><div class="productinfo"><h2>' + this.name + '</h2><div class="hoofdeffect"><h3 class="hoofdh3">' + this.categorie + '</h3><span class="downvote"><img class="voteimg" src="img/downvote.png" alt="downvote"/>' + this.effecten[0].downvotes + '</span><span class="upvote"><img class="voteimg" src="img/upvote.png" alt="upvote"/>' + this.effecten[0].upvotes + '</span></div><div class="bijeffect"><h5>Bij effect</h5><h4 class="bijh4">' + this.effecten[1].effectnaam + '</h4></div></div></li>');
+		if (this.effecten.length > 1) {
+			bijeffecten = '<div class="bijeffect"><h5>Bij effect</h5><h4 class="bijh4">' + this.effecten[1].effectnaam + '</h4></div>';
+			
+		} else {
+			bijeffecten = '<div class="bijeffect"><h5> </h5><h4 class="bijh4"> </h4></div>';;
+			
+		}
+		
+		$("#results").append('<li id="product' + this.productid + '" data-index-number="' + key + '"><img src="img/product/' + this.productid + '.jpg" alt="' + this.scientificname + '"/><div class="productinfo"><h2>' + this.name + '</h2><div class="hoofdeffect"><h3 class="hoofdh3">' + this.categorie + '</h3><span class="downvote"><img class="voteimg" src="img/downvote.png" alt="downvote"/>' + this.effecten[0].downvotes + '</span><span class="upvote"><img class="voteimg" src="img/upvote.png" alt="upvote"/>' + this.effecten[0].upvotes + '</span></div>' + bijeffecten + '</div></li>');
 		
 		// product kiezen
 		$("#results > li#product" + this.productid).click(function(e) {
