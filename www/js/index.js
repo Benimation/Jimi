@@ -154,11 +154,13 @@ $("#infoknop").click(function(e) {
 // feedback messages
 function feedback(message, delay) {
 	$("#feedback").html(message);
-	$("#feedback").css("display", "block");
+	$("#feedbackcontainer").css("display", "block");
+	setTimeout(function() {$("#feedbackcontainer").css("opacity", "1");}, 1);
 	
 	setTimeout(function() {
 		$("#feedback").empty();
-		$("#feedback").css("display", "none");
+		$("#feedbackcontainer").css("opacity", "0");
+		setTimeout(function() {$("#feedbackcontainer").css("display", "none");}, 101);
 		
 	}, delay);
 	
