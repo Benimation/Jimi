@@ -279,8 +279,9 @@ $("#annuleren").click(function(){
 );
 
 $("#inloggen").click(function(e) {
-  $("#container").css("opacity", "0");
-
+	$("#container").css("opacity", "0");
+	
+	rememberpage = "4";
 	
     setTimeout(function() {
 		$("#container").load("pages/login.html", function() {
@@ -290,6 +291,16 @@ $("#inloggen").click(function(e) {
 	}, 100);
   
 });
+
+$("#submitvote").click(function(e) {
+	$("#submitvote").fadeToggle(500);
+    
+});
+$("#votealert").click(function(e) {
+	event.stopPropagation();
+    
+});
+
 
 
 
