@@ -271,7 +271,7 @@ body{
 
 #feedback {
 	position: fixed;
-	top: 50%;
+	top: 45%;
 	transform: translate(0, -50%);
 	width: 90%;
 	background-color: #fff;
