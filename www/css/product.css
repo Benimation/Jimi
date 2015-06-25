@@ -377,10 +377,12 @@ cursor: pointer;
 #tabs #koop ul > li {
 	border-bottom: solid 1px #bc003b;
 	background-repeat: no-repeat;
-	background-position: 96% center;
-	background-size: 14px auto;
-	background-image: url("../img/nextred.png");
+	background-position: 96% center, 8px;
+	background-size: 14px auto, 64px;
+	background-image: url("../img/nextred.png"), url("../img/aza.png");
 	cursor: pointer;
+	padding-left: 80px;
+	
 }
 
 #tabs #effecten > ul > li.bedrijf {
