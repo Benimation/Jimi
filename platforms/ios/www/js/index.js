@@ -65,14 +65,93 @@ $(document).ready(function(e) {
     
 });
 
-
-
-/* connectie grote boze buitenwereld
-$.getJSON("http://benimation.nl/jimi/db/gettest.php", function(data) {
-	alert(data);
+// menu knoppen
+function menuin() {
+	$("#menu").addClass("open");
 	
-}); */
+}
 
+function menuout() {
+	$("#menucontainer").css("opacity", "0");
+	$("#menucontainer").css("display", "none");
+	
+}
+
+$("#homeknop").click(function(e) {
+	$("#container").css("opacity", "0");
+	
+    setTimeout(function() {
+		$("#container").load("pages/screen2.html", function() {
+			$("#container").css("opacity", "1");
+			
+		});
+	}, 100);
+	
+	setTimeout(function() {
+		$("#menu").removeClass("open");
+		setTimeout(menuout, 501);
+		
+	}, 201);
+    
+});
+
+$("#tutknop").click(function(e) {
+	$("#container").css("opacity", "0");
+	
+    setTimeout(function() {
+		$("#container").load("pages/screen1.html", function() {
+			$("#container").css("opacity", "1");
+			
+		});
+	}, 100);
+	
+	setTimeout(function() {
+		$("#menu").removeClass("open");
+		setTimeout(menuout, 501);
+		
+	}, 201);
+    
+});
+
+$("#loginknop").click(function(e) {
+	$("#container").css("opacity", "0");
+	
+    setTimeout(function() {
+		$("#container").load("pages/login.html", function() {
+			$("#container").css("opacity", "1");
+			
+		});
+	}, 100);
+	
+	setTimeout(function() {
+		$("#menu").removeClass("open");
+		setTimeout(menuout, 501);
+		
+	}, 201);
+    
+});
+
+$("#infoknop").click(function(e) {
+	$("#container").css("opacity", "0");
+	
+    setTimeout(function() {
+		$("#container").load("pages/info.html", function() {
+			$("#container").css("opacity", "1");
+			
+		});
+	}, 100);
+	
+	setTimeout(function() {
+		$("#menu").removeClass("open");
+		setTimeout(menuout, 501);
+		
+	}, 201);
+    
+});
+
+
+
+// user
 var theuser = "";
 var theuserid;
 var thepass = "";
