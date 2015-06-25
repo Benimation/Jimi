@@ -197,7 +197,7 @@ cursor: pointer;
 }
 
 .activetab {
-	background-color: #bc003b;
+	background: #bc003b;
 	color: #fff;
 	
 }

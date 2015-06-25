@@ -151,6 +151,23 @@ $("#infoknop").click(function(e) {
 
 
 
+// feedback messages
+function feedback(message, delay) {
+	$("#feedback").html(message);
+	$("#feedbackcontainer").css("display", "block");
+	setTimeout(function() {$("#feedbackcontainer").css("opacity", "1");}, 1);
+	
+	setTimeout(function() {
+		$("#feedback").empty();
+		$("#feedbackcontainer").css("opacity", "0");
+		setTimeout(function() {$("#feedbackcontainer").css("display", "none");}, 101);
+		
+	}, delay);
+	
+}
+
+
+
 // user
 var theuser = "";
 var theuserid;

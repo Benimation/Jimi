@@ -25,11 +25,13 @@ function login() {
 			
 			loadApp();
 			
+			feedback("Welkom, " + theuser, 2000);
+			
 		} else {
 			theuser = "";
 			thepass = "";
 			
-			alert("Inlognaam/wachtwoord verkeerd!");
+			feedback("Inlognaam/wachtwoord verkeerd", 2000);
 			
 		}
 		
