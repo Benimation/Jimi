@@ -256,3 +256,8 @@ body{
 	margin-top: 24px;
 	
 }
+
+#feedback {
+	display: none;
+	
+}
