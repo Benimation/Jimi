@@ -30,11 +30,13 @@ function register() {
 			
 			loadApp();
 			
+			feedback("Je bent geregistreerd en ingelogd", 2000);
+			
 		} else {
 			theuser = "";
 			thepass = "";
 			
-			alert("Deze naam is al in gebruik!");
+			feedback("Deze naam is al in gebruik", 2000);
 			
 		}
 		
