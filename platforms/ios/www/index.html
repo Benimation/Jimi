@@ -18,12 +18,18 @@
     
     	<div id="deviceready" class="blink"></div>
         
-    	 <div id="splash"><div id="logo"><img src="img/splash.png" /></div></div>
-        <div id="menu">hier komt het menu</div>
-        <div id="container">
-        
-        	
-        
+    	<div id="splash"><div id="logo"><img src="img/splash.png" /></div></div>
+        <div id="container"></div>
+        <div id="menucontainer">
+        	<ul id="menu">
+            	<div id="menulogo"></div>
+        		<li>Home</li>
+                <li>Tutorial</li>
+                <li>Inloggen</li>
+                <li>Overige informatie</li>
+                
+                
+        	</ul>
         </div>
         
         <script type="text/javascript" src="cordova.js"></script>
@@ -32,10 +38,6 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
-			
-			$("#info").click(function(){
-				$("#menu").fadeToggle(500);
-			});
 			
         </script>
     </body>
