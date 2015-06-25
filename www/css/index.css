@@ -160,9 +160,7 @@ body{
 	height: 112px;
 	top: 0;
   	background-image: url("../img/header.png");
-		background-size: cover;	
-		
-	z-index: 999;
+	background-size: cover;
 	
 }
 
@@ -224,8 +222,10 @@ body{
 
 #menu {
 	font-size: 18px;
-	line-height: 36px;
-	background-color: black;
+	color: #fff;
+	font-weight: 300;
+	line-height: 48px;
+	background: linear-gradient(#0a2d5d, #344b6a);
 	transition: 500ms left ease-in-out;
 	height: 100%;
 	left: 100%;
@@ -253,5 +253,6 @@ body{
 	height: 60px;
 	text-align: center;
 	display: inline-block;
+	margin-top: 24px;
 	
 }

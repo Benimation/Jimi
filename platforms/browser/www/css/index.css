@@ -160,9 +160,7 @@ body{
 	height: 112px;
 	top: 0;
   	background-image: url("../img/header.png");
-		background-size: cover;	
-		
-	z-index: 999;
+	background-size: cover;
 	
 }
 
