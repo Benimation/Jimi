@@ -210,6 +210,10 @@ $("#submitvote #voteup").click(function(e) {
 
 $("#submitvote #votedown").click(function(e) {
 	$.getJSON("http://benimation.nl/jimi/db/vote.php?userid=" + theuserid + "&pass=" + thepass + "&effectid=" + govote + "&updown=0", function(data) {
+		if (data[1] == "already voted") {
+			feedback("Je hebt hier al op gestemd", 2000);
+			
+		}
 		$("#submitvote").fadeToggle(500);
 		
 	});
