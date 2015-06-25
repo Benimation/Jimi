@@ -74,7 +74,13 @@ voteupdater = setInterval(reloadProductData, 2000);
 
 // gekozen product weergeven
 var thisproductnaam = thisproductdata.name;
-var thisgebruik = thisproductdata.gebruik;
+var thisgebruikcsv = $.csv.toArray(thisproductdata.gebruik);
+var thisgebruik = "";
+
+$.each(thisgebruikcsv, function(key, val) {
+	thisgebruik += "<li>" + val + "</li>";
+	
+});
 
 $("#productnavigatie > h2").html(thisproductnaam);
 
@@ -128,7 +134,7 @@ $("#tabmenu > li#gebruik").click(function(e) {
 });
 
 // inladen
-$("#tabs > #gebruik > p").html(thisgebruik);
+$("#tabs > #gebruik > p").html("<h4>Je kunt dit product:</h4>" + thisgebruik);
 $("#tabs > #beschrijving > p").html(thisproductdata.beschrijving.replace("@", "<br />") + '<p class="warning">' + thisproductdata.waarschuwing.replace("@", "<br />") + "</p>");
 
 var govote;
