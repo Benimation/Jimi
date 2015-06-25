@@ -323,10 +323,9 @@ cursor: pointer;
 }
 
 .koopbutton {
-	  position: absolute;
-  top: 320px;
-  left: 15px;
-
+	position: absolute;
+	top: 320px;
+	left: 15px;
 	
 }
 
@@ -336,14 +335,6 @@ cursor: pointer;
 	padding: 10px;
 	
 }
-
-/* waarschuwing tab */
-#tabs #koop {
-	padding: 10px;
-	
-}
-
-
 
 
 
