@@ -129,4 +129,38 @@ $("#back").click(function(e) {
   
 });
 
+$("#info").click(function(e) {
+	$("#menucontainer").css("display", "block");
+	$("#menucontainer").css("opacity", "1");
+	setTimeout(menuin, 101);
+    
+});
+
+$("#menucontainer").on("swiperight", function(e) {
+	$("#menu").removeClass("open");
+	setTimeout(menuout, 501);
+	
+});
+
+$("#menucontainer").click(function(e) {
+	$("#menu").removeClass("open");
+	setTimeout(menuout, 501);
+	
+});
+$("#menu").click(function(event){
+    event.stopPropagation();
+	
+});
+
+function menuin() {
+	$("#menu").addClass("open");
+	
+}
+
+function menuout() {
+	$("#menucontainer").css("opacity", "0");
+	$("#menucontainer").css("display", "none");
+	
+}
+
 </script>

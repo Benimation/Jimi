@@ -20,6 +20,7 @@
 	margin: 0;
 	padding: 0;
 	outline: none;
+	list-style: none;
 	
 }
 
@@ -209,9 +210,48 @@ body{
 	cursor: pointer;
 }
 
-#menu{
+#menucontainer {
+	background-color: rgba(0,0,0,0.5);
 	position: fixed;
-	z-index: 50;
-	font-size: 100px;
-	display: none;	
+	top: 0;
+	height: 100%;
+	width: 100%;
+	display: none;
+	opacity: 0;
+	transition: 100ms opacity ease-in-out, 100ms display ease-in-out;
+	
+}
+
+#menu {
+	font-size: 18px;
+	line-height: 36px;
+	background-color: black;
+	transition: 500ms left ease-in-out;
+	height: 100%;
+	left: 100%;
+	position: absolute;
+	width: 80%;
+	
+}
+
+#menu li {
+	padding-left: 32px;
+	
+}
+
+#menu.open {
+	left: 20%;
+	
+}
+
+#menulogo {
+	background-image: url("../img/logotop.png");
+	background-size: auto 50px;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	display: inline-block;
+	
 }
