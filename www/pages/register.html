@@ -39,6 +39,10 @@ function register() {
 			
 			feedback("Je bent geregistreerd en ingelogd", 2000);
 			
+			$("#loginknop").html("Uitloggen");
+			$("#loginknop").removeClass("inloggen");
+			$("#loginknop").addClass("uitloggen");
+			
 		} else {
 			theuser = "";
 			thepass = "";
