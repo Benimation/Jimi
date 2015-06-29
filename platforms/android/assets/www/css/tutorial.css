@@ -83,9 +83,10 @@
 }
 
 .regist{
-	  display: block;
-  text-align: center;
-  font-weight: 700;
-  font-size: 22px;
-    margin-top: 20px;
+	display: inline-block;
+	text-align: center;
+	font-weight: 700;
+	font-size: 22px;
+	margin-top: 20px;
+	
 }
