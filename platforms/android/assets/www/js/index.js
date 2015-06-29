@@ -116,18 +116,38 @@ $("#tutknop").click(function(e) {
 $("#loginknop").click(function(e) {
 	$("#container").css("opacity", "0");
 	
-    setTimeout(function() {
-		$("#container").load("pages/login.html", function() {
-			$("#container").css("opacity", "1");
-			
-		});
-	}, 100);
+	if ($(this).hasClass("inloggen")) {
+		setTimeout(function() {
+			$("#container").load("pages/login.html", function() {
+				$("#container").css("opacity", "1");
+				
+			});
+		}, 100);
+		
+	} else if ($(this).hasClass("uitloggen")) {
+		setTimeout(function() {
+			$("#container").load("pages/screen2.html", function() {
+				$("#container").css("opacity", "1");
+				
+			});
+		}, 100);
+		
+		theuser = "";
+		thepass = "";
+		
+		$("#loginknop").html("Inloggen");
+		$("#loginknop").removeClass("uitloggen");
+		$("#loginknop").addClass("inloggen");
+		
+		feedback("Uitgelogd", 1500);
+		
+	}
 	
 	setTimeout(function() {
-		$("#menu").removeClass("open");
-		setTimeout(menuout, 501);
-		
-	}, 201);
+			$("#menu").removeClass("open");
+			setTimeout(menuout, 501);
+			
+		}, 201);
     
 });
 
