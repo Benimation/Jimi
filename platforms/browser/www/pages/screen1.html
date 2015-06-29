@@ -120,8 +120,8 @@ function posterslide(direction) {
 
 			} else if (direction == "right") {
 				$(".nextpost").css("position", "relative");
-				$(".nextpost").css("top", -1 * $(".prevpost").height());
-				$(".nextpost").css("right", "100%");
+				$(".nextpost").css("top", (-1 * $(".prevpost").height()) + "px");
+				$(".nextpost").css("right", ($(".nextpost").width()) + "px");
 
 				$(".prevpost").css("position", "relative");
 				$(".prevpost").css("right", "0");
