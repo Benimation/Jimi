@@ -332,7 +332,7 @@ cursor: pointer;
 
 /* Gebruik tab */
 #tabs #gebruik {
-	padding: 10px;
+	padding: 16px 32px;
 	
 }
 
@@ -340,7 +340,7 @@ cursor: pointer;
 
 /* Beschrijving tab */
 #tabs #beschrijving {
-	padding: 10px;
+	padding: 10px 20px;
 	
 }
 
