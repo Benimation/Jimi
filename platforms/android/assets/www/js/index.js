@@ -186,6 +186,10 @@ function feedback(message, delay) {
 var theuser = "";
 var theuserid;
 var thepass = "";
+<<<<<<< HEAD
 
 var rememberpage = "";
 var voteupdater;
+=======
+var rememberpage = "";
+>>>>>>> origin/master

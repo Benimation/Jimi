@@ -1,16 +1,16 @@
 <h1>4. Klaar voor?</h1>
-<p>Je bent nu klaar om Jimi te gaan gebruiken. Wil je alle functionaliteiten van de app benutten? Vergeet je dan niet te registeren. 
+<p>Je bent nu klaar om Jimi te gaan gebruiken. Wil je alle functionaliteiten van de app benutten? Vergeet je dan niet in te loggen. 
 <br />
 
 </p>
-<span class="regist">Registreren</span>
+<span class="regist">Log in</span>
 <script>
 
 $(".regist").click(function(e) {
 	$("#container").css("opacity", "0");
 	
     setTimeout(function() {
-		$("#container").load("pages/register.html", function() {
+		$("#container").load("pages/login.html", function() {
 			$("#container").css("opacity", "1");
 			
 		});

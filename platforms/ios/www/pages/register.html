@@ -28,7 +28,14 @@ function register() {
 		if (data[0]) {
 			theuserid = data[1];
 			
-			loadApp();
+			if (rememberpage == "") {
+				loadApp(2);
+				
+			} else {
+				loadApp(rememberpage);
+				rememberpage = "";
+				
+			}
 			
 			feedback("Je bent geregistreerd en ingelogd", 2000);
 			
@@ -55,18 +62,6 @@ $("#terug").click(function(e) {
 	}, 100);
   
 });
-
-function loadApp() {
-	$("#container").css("opacity", "0");
-	
-    setTimeout(function() {
-		$("#container").load("pages/screen2.html", function() {
-			$("#container").css("opacity", "1");
-			
-		});
-	}, 100);
-	
-}
 
 
 
