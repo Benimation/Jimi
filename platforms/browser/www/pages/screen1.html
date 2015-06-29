@@ -50,52 +50,10 @@ $("#tutorialcontainer").on("swiperight", function(e) {
     
 });
 
-/*$("#tuttabs>li:nth-child(1)").click(function(e) {
-	if (pagenum != 2) {
-		pagenum = 2;
-		posterslide("right");
-		
-	}
+$("#tutorialcontainer").click(function(e) {
+	posterslide("left");
     
 });
-$("#tuttabs>li:nth-child(2)").click(function(e) {
-	if (pagenum != 3) {
-		if (pagenum < 3) {
-			pagenum = 2;
-			posterslide("left");
-			
-		} else {
-			pagenum = 2;
-			posterslide("right");
-			
-		}
-		
-	}
-    
-});
-$("#tuttabs>li:nth-child(3)").click(function(e) {
-	if (pagenum != 4) {
-			if (pagenum < 4) {
-			pagenum = 4;
-			posterslide("left");
-			
-		} else {
-			pagenum = 2;
-			posterslide("right");
-			
-		}
-		
-	}
-    
-});
-$("#tuttabs>li:nth-child(4)").click(function(e) {
-	if (pagenum != 5) {
-		pagenum = 4;
-		posterslide("left");
-		
-	}
-    
-});*/
 
 
 
@@ -133,8 +91,8 @@ function posterslide(direction) {
 			// slide animation
 			if (direction == "left") {
 				$(".nextpost").css("position", "relative");
-				$(".nextpost").css("top", -1 * $(".prevpost").height());
-				$(".nextpost").css("right", "-100%");
+				$(".nextpost").css("top", (-1 * $(".prevpost").height()) + "px");
+				$(".nextpost").css("right", ($(".nextpost").width() * -1) + "px");
 
 				$(".prevpost").css("position", "relative");
 				$(".prevpost").css("right", "0");
