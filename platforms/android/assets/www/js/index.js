@@ -151,6 +151,20 @@ $("#infoknop").click(function(e) {
 
 
 
+function loadApp(page) {
+	$("#container").css("opacity", "0");
+	
+    setTimeout(function() {
+		$("#container").load("pages/screen" + page + ".html", function() {
+			$("#container").css("opacity", "1");
+			
+		});
+	}, 100);
+	
+}
+
+
+
 // feedback messages
 function feedback(message, delay) {
 	$("#feedback").html(message);
@@ -172,3 +186,6 @@ function feedback(message, delay) {
 var theuser = "";
 var theuserid;
 var thepass = "";
+
+var rememberpage = "";
+var voteupdater;

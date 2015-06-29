@@ -186,4 +186,6 @@ function feedback(message, delay) {
 var theuser = "";
 var theuserid;
 var thepass = "";
+
 var rememberpage = "";
+var voteupdater;
