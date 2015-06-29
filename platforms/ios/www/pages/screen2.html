@@ -42,6 +42,14 @@ function zoek() {
     
 }
 
+$("#zoekknop").click(function(e) {
+	if ($(this).val() == "") {
+		$("#zoekbalk").focus();
+		
+	}
+    
+});
+
 $("#categories > li.droom").click(function(e) {
 	gekozencategorie = "Droomopwekkend";
 	

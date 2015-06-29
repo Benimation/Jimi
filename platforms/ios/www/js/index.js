@@ -182,8 +182,21 @@ function feedback(message, delay) {
 
 
 
+// Android back button
+document.addEventListener("backbutton", backKeyDown, true); 
+
+
+function backKeyDown() {
+    $("#back").trigger("click");
+	
+}
+
+
+
 // user
 var theuser = "";
 var theuserid;
 var thepass = "";
+
 var rememberpage = "";
+var voteupdater;

@@ -135,7 +135,7 @@ $("#tabmenu > li#gebruik").click(function(e) {
 
 // inladen
 $("#tabs > #gebruik > p").html("<h4>Je kunt dit product:</h4>" + thisgebruik);
-$("#tabs > #beschrijving > p").html(thisproductdata.beschrijving.replace("@", "<br />") + '<p class="warning">' + thisproductdata.waarschuwing.replace("@", "<br />") + "</p>");
+$("#tabs > #beschrijving > p").html(thisproductdata.beschrijving.replace(/@/g, "<br />") + '<p class="warning">' + thisproductdata.waarschuwing.replace(/@/g, "<br />") + "</p>");
 
 var govote;
 
