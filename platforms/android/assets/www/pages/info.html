@@ -1,25 +1,45 @@
-<div id="tutorialcontainer">
-
-	<div id="kruisje">skip</div>
-	
-    <div id="logoLogin"></div>
-    
-    <div id="tuttekst"></div>
-  
-    <ul id="tuttabs">
-    	<li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-    
+<div class="topmenu">
+	<div id="back"></div>
+    <div id="logoheader"></div>
+	<div id="info"></div>
+    <div class="titlebanner">Informatie</div>
 </div>
 
+<div class="contentcontainer">
+
+<p class="infotekst">Jimi is een gat in de markt. Op dit moment is het snel opzoeken van betrouwbare informatie over smartmiddelen vrijwel onmogelijk. Jimi brengt hier verandering in. Onze oplossing is het beste van twee werelden samenbrengen, namelijk informatie van professionals gekoppeld aan  gebruikerservaringen. Jimi maakt het mogelijk om gemakkelijk
+betrouwbare informatie te vinden middels een open community.
+<br />
+<br />
+<img height="80px" src="img/gemak.png"/><br /><br />
+<span class="infoh">Gemak</span><br />
+Snel en eenvoudig 
+betrouwbare informatie over (bijna) alle smart artikelen door te zoeken op effecten.
+<br/>
+<br />
+<img height="80px" src="img/betrouwbaar.png"/><br /><br />
+<span class="infoh">Betrouwbaar</span><br/>
+Al onze informatie is rechtstreeks afkomstig van 
+professionals (smartshops) en  aangevuld door 
+gebruikerservaringen.
+<br/>
+<br />
+<img height="80px" src="img/open.png"/><br /><br />
+<span class="infoh">Open</span><br/>
+Bij een onderwerp waar een taboe op rust is het belangrijk dat mensen informatie met elkaar beginnen te delen.
+</p>
+
+</div>
 
 <script>
-window.scrollTo(0, 0);
+$("#back").height($("#back").width());
 
-$("#kruisje").click(function(e) {
+$(window).resize(function(e) {
+	$("#back").height($("#back").width());
+    
+});
+
+$("#back").click(function(e) {
 	$("#container").css("opacity", "0");
 	
     setTimeout(function() {
@@ -28,172 +48,35 @@ $("#kruisje").click(function(e) {
 			
 		});
 	}, 100);
+  
+});
+
+
+
+// menu knop
+$("#info").click(function(e) {
+	$("#menucontainer").css("display", "block");
+	$("#menucontainer").css("opacity", "1");
+	setTimeout(menuin, 101);
+    
+});
+
+$("#menucontainer").on("swiperight", function(e) {
+	$("#menu").removeClass("open");
+	setTimeout(menuout, 501);
+	
+});
+
+$("#menucontainer").click(function(e) {
+	$("#menu").removeClass("open");
+	setTimeout(menuout, 501);
+	
+});
+$("#menu").click(function(event){
+    event.stopPropagation();
 	
 });
 
 
 
-// slider settings
-var pagenum = 1;
-var issliding = false;
-var slidespeed = 700;
-
-
-
-// slide event listeners
-$("#tutorialcontainer").on("swipeleft", function(e) {
-	posterslide("left");
-    
-});
-$("#tutorialcontainer").on("swiperight", function(e) {
-	posterslide("right");
-    
-});
-
-$("#tuttabs>li:nth-child(1)").click(function(e) {
-	if (pagenum != 1) {
-		pagenum = 0;
-		posterslide("right");
-		
-	}
-    
-});
-$("#tuttabs>li:nth-child(2)").click(function(e) {
-	if (pagenum != 2) {
-		if (pagenum < 2) {
-			pagenum = 1;
-			posterslide("left");
-			
-		} else {
-			pagenum = 1;
-			posterslide("right");
-			
-		}
-		
-	}
-    
-});
-$("#tuttabs>li:nth-child(3)").click(function(e) {
-	if (pagenum != 3) {
-			if (pagenum < 3) {
-			pagenum = 3;
-			posterslide("left");
-			
-		} else {
-			pagenum = 1;
-			posterslide("right");
-			
-		}
-		
-	}
-    
-});
-$("#tuttabs>li:nth-child(4)").click(function(e) {
-	if (pagenum != 4) {
-		pagenum = 3;
-		posterslide("left");
-		
-	}
-    
-});
-
-
-
-// sliding
-$("#tuttekst").load("pages/tut/" + pagenum + ".html");
-
-function posterslide(direction) {
-	if (!issliding) {
-		issliding = true;
-		
-		
-		// decide page
-		if (direction == "left" && pagenum != 4) {
-			pagenum++;
-			
-		} else if (direction == "right" && pagenum == 1) {
-			pagenum = 4;
-			
-		} else if (direction == "left" && pagenum == 4) {
-			pagenum = 1;
-			
-		} else {
-			pagenum--;
-			
-		}
-		
-		$("#tuttabs>li").css("opacity", "0.5");
-		$("#tuttabs>li:nth-child(" + pagenum + ")").css("opacity", "1");
-
-
-		$("#tuttekst").addClass("prevpost");
-		$("#tuttekst").after('<section id="tuttekst" class="nextpost"></section>');
-
-		$(".nextpost").load("pages/tut/" + pagenum + ".html", function(e) {
-			// slide animation
-			if (direction == "left") {
-				$(".nextpost").css("position", "relative");
-				$(".nextpost").css("top", -1 * $(".prevpost").height());
-				$(".nextpost").css("right", "-100%");
-
-				$(".prevpost").css("position", "relative");
-				$(".prevpost").css("right", "0");
-
-				$(".nextpost").animate({
-					right: 0
-
-				}, slidespeed, function() {
-					// Animation complete
-					$(".nextpost").css("top", "0");
-					$(".nextpost").removeClass("nextpost");
-
-					issliding = false;
-
-				});
-
-				$(".prevpost").animate({
-					right: "100%"
-
-				}, slidespeed, function() {
-					// animation completed
-					$(".prevpost").remove();
-
-				});
-
-			} else if (direction == "right") {
-				$(".nextpost").css("position", "relative");
-				$(".nextpost").css("top", -1 * $(".prevpost").height());
-				$(".nextpost").css("right", "100%");
-
-				$(".prevpost").css("position", "relative");
-				$(".prevpost").css("right", "0");
-
-				$(".nextpost").animate({
-					right: 0
-
-				}, slidespeed, function() {
-					// animation completed
-					$(".nextpost").css("top", "0");
-					$(".nextpost").removeClass("nextpost");
-
-					issliding = false;
-
-				});
-
-				$(".prevpost").animate({
-					right: "-100%"
-
-				}, slidespeed, function() {
-					// animation completed
-					$(".prevpost").remove();
-
-				});
-
-			}
-
-		});
-
-	}
-
-}
 </script>

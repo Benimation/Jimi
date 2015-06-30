@@ -147,3 +147,29 @@ h2{
 	margin-top: 144px;
 	
 }
+
+#suggest {
+	display: none;
+	background-color: #efefef;
+	height: 33px;
+	position: absolute;
+	top: 147px;
+	width: 100%;
+	overflow: hidden;
+	line-height: 33px;
+	padding: 0px 58px;
+	color: #ccc;
+	
+}
+
+#suggest ul {
+	display: inline;
+	position: relative;
+	top: -33px;
+	left: 66px;
+	
+}
+#suggest ul li {
+	display: block;
+	
+}
