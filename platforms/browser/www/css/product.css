@@ -94,18 +94,20 @@ cursor: pointer;
 
 #productnavigatie h2{
 	background-image: url("../img/navbar.png");
-		background-size: cover;	
+	background-size: cover;	
 	border-bottom: 2px solid #8e979e;
-  color: #fff;
-  text-align: center;
-  height: 32px;
-  font-size: 16px;
-  line-height: 32px;
-  position: fixed;
-  width: 100%;
-  top: 70px;
-  opacity: .98;
-    font-weight: 400;
+	color: #fff;
+	text-align: center;
+	height: 32px;
+	font-size: 16px;
+	line-height: 32px;
+	position: fixed;
+	width: 100%;
+	max-width: 960px;
+	top: 70px;
+	opacity: .98;
+	font-weight: 400;
+	
 }
 
 #foto{

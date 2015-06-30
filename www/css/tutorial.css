@@ -1,5 +1,3 @@
-
-
 @charset "UTF-8";
 /* CSS Document */
 
@@ -11,15 +9,16 @@
 }
 
 #kruisje{
-	  position: absolute;
-	  z-index:15;
-  color: #fff;
-  font-weight: 700;
-  font-size: 22px;
-  float: right;
-  bottom: 20px;
-  right: 20px;
-  cursor: pointer;
+	position: relative;
+	z-index: 15;
+	color: #fff;
+	font-weight: 700;
+	font-size: 22px;
+	float: right;
+	bottom: -94%;
+	right: 20px;
+	cursor: pointer;
+	
 }
 
 #tuttekst{
@@ -56,14 +55,16 @@
 }
 
 #tuttabs{
-  display: inline-block;
-  position: absolute;
-  width: 100%;
-  left: auto;
-  right: auto;
-  bottom: 17px;
-  text-align: center;
-  }
+	display: inline-block;
+	position: absolute;
+	width: 100%;
+	max-width: 960px;
+	left: auto;
+	right: auto;
+	bottom: 17px;
+	text-align: center;
+	
+}
   
   #tuttabs > li:nth-child(1){
 		opacity: 1;  

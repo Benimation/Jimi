@@ -31,7 +31,12 @@ function loadProductData() {
 		}
 		
 		$.getJSON("http://benimation.nl/jimi/db/get.php?categorie=" + gekozencategorie, function(data) {
-			productdata = data;
+			productdata = data.sort(function(a, b) { return (b["effecten"][0]["upvotes"]-b["effecten"][0]["downvotes"]) - (a["effecten"][0]["upvotes"]-a["effecten"][0]["downvotes"]) });;
+			
+			$.each(productdata, function(index) {
+				productdata[index].effecten.sort(function(a, b) { return (b["upvotes"]-b["downvotes"]) - (a["upvotes"]-a["downvotes"]) });
+				
+			});
 			
 			displayProducts();
 			
@@ -47,7 +52,12 @@ function loadProductData() {
 		}
 		
 		$.getJSON("http://benimation.nl/jimi/db/get.php?search=" + zoekopdracht, function(data) {
-			productdata = data;
+			productdata = data.sort(function(a, b) { return (b["effecten"][0]["upvotes"]-b["effecten"][0]["downvotes"]) - (a["effecten"][0]["upvotes"]-a["effecten"][0]["downvotes"]) });;
+			
+			$.each(productdata, function(index) {
+				productdata[index].effecten.sort(function(a, b) { return (b["upvotes"]-b["downvotes"]) - (a["upvotes"]-a["downvotes"]) });
+				
+			});
 			
 			displayProducts();
 			
