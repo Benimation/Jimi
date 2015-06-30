@@ -22,7 +22,13 @@ var gekozenproduct = 0;
 
 function loadProductData() {
 	if (gekozencategorie != "") {
-		$(".titlebanner").html(gekozencategorie);
+		if ($(".titlebanner").hasClass("info")) {
+			$(".titlebanner").html("Informatie");
+			
+		} else {
+			$(".titlebanner").html(gekozencategorie);
+			
+		}
 		
 		$.getJSON("http://benimation.nl/jimi/db/get.php?categorie=" + gekozencategorie, function(data) {
 			productdata = data;
@@ -32,7 +38,13 @@ function loadProductData() {
 		});
 		
 	} else if (zoekopdracht != "") {
-		$(".titlebanner").html("Gezocht op: " + zoekopdracht);
+		if ($(".titlebanner").hasClass("info")) {
+			$(".titlebanner").html("Informatie");
+			
+		} else {
+			$(".titlebanner").html("Gezocht op: " + zoekopdracht);
+			
+		}
 		
 		$.getJSON("http://benimation.nl/jimi/db/get.php?search=" + zoekopdracht, function(data) {
 			productdata = data;

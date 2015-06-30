@@ -2,7 +2,7 @@
 	<div id="back"></div>
     <div id="logoheader"></div>
 	<div id="info"></div>
-    <div class="titlebanner">Informatie</div>
+    <div class="titlebanner info">Informatie</div>
 </div>
 
 <div class="contentcontainer">
@@ -32,6 +32,12 @@ Bij een onderwerp waar een taboe op rust is het belangrijk dat mensen informatie
 </div>
 
 <script>
+window.scrollTo(0, 0);
+
+clearInterval(voteupdater);
+
+$(".titlebanner").html("Informatie");
+
 $("#back").height($("#back").width());
 
 $(window).resize(function(e) {

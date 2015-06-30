@@ -6,16 +6,16 @@
         <param name="onload" value="true" />
     </feature>
     <allow-intent href="market:*" />
-    <name>Hello World</name>
+    <name>Jimi</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Betrouwbaar inzicht in de wereld van smartmiddelen.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="info@jimi.nl" href="http://jimi.nl">
+        JimInc.
     </author>
     <content src="index.html" />
     <preference name="permissions" value="none" />
-    <preference name="orientation" value="default" />
+    <preference name="orientation" value="portrait" />
     <preference name="target-device" value="universal" />
     <preference name="fullscreen" value="true" />
     <preference name="webviewbounce" value="true" />
