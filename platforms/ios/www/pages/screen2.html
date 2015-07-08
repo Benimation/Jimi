@@ -11,6 +11,17 @@
     <input id="zoekknop" type="submit" value="" />
     
     </form>
+    <div id="suggest">
+    <span>Zoek op: </span>
+    <ul id="opties">
+    	<li>productnaam</li>
+        <li>effect</li>
+        <li>categorie</li>
+        <li>gebruik</li>
+        <li>wetenschappelijke naam</li>
+        
+    </ul>
+    </div>
 
 
 <!-- Op middel, symptoom, effect of inname -->
@@ -32,6 +43,9 @@ window.scrollTo(0, 0);
 var gekozencategorie = "";
 var zoekopdracht = "";
 
+
+
+// zoeken
 function zoek() {
 	zoekopdracht = $("#zoekbalk").val();
 	
@@ -50,6 +64,31 @@ $("#zoekknop").click(function(e) {
     
 });
 
+var suggestinterval;
+
+$("#zoekbalk").focus(function(e) {
+	$("#suggest").css("display", "block");
+	suggestinterval = setInterval(suggest, 2000);
+    
+});
+
+$("#zoekbalk").focusout(function(e) {
+	$("#suggest").css("display", "none");
+	clearInterval(suggestinterval);
+    
+});
+
+function suggest() {
+	$("#suggest ul li:first").slideUp(200, function() {
+		$(this).appendTo($("#suggest ul")).css("display", "block");
+		
+	});
+	
+}
+
+
+
+// kiezen
 $("#categories > li.droom").click(function(e) {
 	gekozencategorie = "Droomopwekkend";
 	

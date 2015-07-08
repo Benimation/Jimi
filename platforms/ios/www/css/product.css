@@ -94,18 +94,20 @@ cursor: pointer;
 
 #productnavigatie h2{
 	background-image: url("../img/navbar.png");
-		background-size: cover;	
+	background-size: cover;	
 	border-bottom: 2px solid #8e979e;
-  color: #fff;
-  text-align: center;
-  height: 32px;
-  font-size: 16px;
-  line-height: 32px;
-  position: fixed;
-  width: 100%;
-  top: 70px;
-  opacity: .98;
-    font-weight: 400;
+	color: #fff;
+	text-align: center;
+	height: 32px;
+	font-size: 16px;
+	line-height: 32px;
+	position: fixed;
+	width: 100%;
+	max-width: 960px;
+	top: 70px;
+	opacity: .98;
+	font-weight: 400;
+	
 }
 
 #foto{
@@ -379,15 +381,18 @@ cursor: pointer;
 	background-repeat: no-repeat;
 	background-position: 96% center, 8px;
 	background-size: 14px auto, 64px;
-	background-image: url("../img/nextred.png"), url("../img/aza.png");
+	background-image: url("../img/nextred.png"), url("../img/empty.png");
 	cursor: pointer;
 	padding-left: 80px;
 	
 }
 
-#tabs #effecten > ul > li.bedrijf {
-	background-image: url("../img/azariusLogo.png");
-	width: 50%;
-	height: 50%;
+#tabs #koop > ul > li.bedrijf.sp { 
+	background-image: url("../img/nextred.png"), url("../img/sp.png");
+	
+}
+
+#tabs #koop > ul > li.bedrijf.aza { 
+	background-image: url("../img/nextred.png"), url("../img/aza.png");
 	
 }

@@ -32,6 +32,9 @@ html, body, #splash {
 body{
 	font-family: "lato", 'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;	
 	color: #404e5c;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
 	
 }
 
@@ -161,6 +164,9 @@ body{
 	top: 0;
   	background-image: url("../img/header.png");
 	background-size: cover;
+	max-width: 960px;
+	margin-left: auto;
+	margin-right: auto;
 	
 }
 
@@ -170,16 +176,17 @@ body{
 
 .titlebanner {
 	background-image: url("../img/navbar.png");
-		background-size: cover;	
+	background-size: cover;	
 	border-bottom: 2px solid #8e979e;
 	color: #fff;
 	text-align: center;
 	height: 32px;
 	font-size: 16px;
 	line-height: 32px;
-	  position: fixed;
-  width: 100%;
-    top: 80px;
+	position: fixed;
+	width: 100%;
+	max-width: 960px;
+	top: 80px;
 	
 }
 
